@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	monsterInputType="Letter"
+	CollectableMonster=""
+	SegmentTime="11"
+	HideCallout="-1"
+	LettersGroup="1"
+	StoneType="1"
+>
+  <Segments>
+    <Segment spawnIds="28,94,7,8,25,93" SegmentTime="11">
+    	<!-- Puzzle One -->
+    	<MonsterRequiredLetters>
+    		<string>Т</string>
+    	</MonsterRequiredLetters>
+    	<MonsterAllLetters>
+    	</MonsterAllLetters>
+    	<Stones>
+    		<string>Т</string>
+    		<string>М</string>
+			<string>Л</string>
+			<string>Т</string>
+    		<string>М</string>
+			<string>Л</string>
+    	</Stones>
+	</Segment>
+	<Segment spawnIds="25,93,6,7,8,23" SegmentTime="11">
+		<!-- Puzzle Two -->
+		<MonsterRequiredLetters>
+			<string>Е</string>
+		</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+			<string>Т</string>
+			<string>Е</string>
+        	<string>Л</string>
+        	<string>Е</string>
+			<string>Л</string>
+        	<string>Т</string>
+      	</Stones>
+    </Segment>
+	<Segment spawnIds="59,78,6,7,62,78" SegmentTime="11">
+		<!-- Puzzle Three -->
+      	<MonsterRequiredLetters>
+			<string>Д</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+			<string>Д</string>
+			<string>А</string>
+			<string>О</string>
+	        <string>Д</string>
+			<string>А</string>
+			<string>О</string>
+      	</Stones>
+	</Segment>
+	<Segment spawnIds="61,79,7,8,9,24" SegmentTime="11">
+		<!-- Puzzle Four -->
+      	<MonsterRequiredLetters>
+			<string>Л</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+	        <string>А</string>
+			<string>А</string>
+	        <string>Д</string>
+			<string>Д</string>
+			<string>Н</string>
+	       	<string>Н</string>
+      	</Stones>
+    </Segment>
+	<Segment spawnIds="94,93,59,61,7,8" SegmentTime="11">
+		<!-- Puzzle Five -->
+      	<MonsterRequiredLetters>
+			<string>С</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+			<string>О</string>
+	        <string>С</string>
+	        <string>О</string>
+	        <string>С</string>
+			<string>А</string>
+			<string>А</string>
+      	</Stones>
+	</Segment>
+  </Segments>
+</XMLLevel>

@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	monsterInputType="SoundLetter"
+	CollectableMonster=""
+	SegmentTime="11"
+	HideCallout="-1"
+	LettersGroup="1"
+	StoneType="1"
+>
+  <Segments>
+    <Segment spawnIds="82,83,21,22" SegmentTime="11">
+    	<!-- Puzzle One -->
+    	<MonsterRequiredLetters>
+    		<string>Т</string>
+    	</MonsterRequiredLetters>
+    	<MonsterAllLetters>
+    	</MonsterAllLetters>
+    	<Stones>
+    		<string>Т</string>
+    		<string>К</string>
+			<string>Т</string>
+    		<string>К</string>
+    	</Stones>
+	</Segment>
+	<Segment spawnIds="21,22,7,8,9,13" SegmentTime="11">
+		<!-- Puzzle Two -->
+		<MonsterRequiredLetters>
+			<string>Е</string>
+		</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+        	<string>А</string>
+			<string>А</string>
+        	<string>Е</string>
+			<string>Е</string>
+			<string bonusScore="100">BonusLetter</string>
+			<string bonusScore="100">BonusLetter</string>
+      	</Stones>
+    </Segment>
+	<Segment spawnIds="93,94,82,83,21,22" SegmentTime="11">
+		<!-- Puzzle Three -->
+      	<MonsterRequiredLetters>
+			<string>Д</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+			<string>Д</string>
+	        <string>А</string>
+			<string>Д</string>
+	        <string>А</string>
+			<string bonusScore="100">FireWrongLetter</string>
+			<string bonusScore="100">FireWrongLetter</string>
+      	</Stones>
+	</Segment>
+	<Segment spawnIds="54,55,21,22" SegmentTime="11">
+		<!-- Puzzle Four -->
+      	<MonsterRequiredLetters>
+			<string>Л</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+	        <string>Л</string>
+	        <string>К</string>
+			<string>К</string>
+			<string>Л</string>
+      	</Stones>
+    </Segment>
+	<Segment spawnIds="25,28,60,87" SegmentTime="11">
+		<!-- Puzzle Five -->
+      	<MonsterRequiredLetters>
+			<string>С</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+			<string>Н</string>
+	        <string>С</string>
+	        <string>С</string>
+			<string>Н</string>
+      	</Stones>
+	</Segment>
+  </Segments>
+</XMLLevel>

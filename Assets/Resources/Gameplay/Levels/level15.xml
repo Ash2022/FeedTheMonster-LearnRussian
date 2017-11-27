@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	monsterInputType="Letter"
+	CollectableMonster=""
+	SegmentTime="11"
+	HideCallout="-1"
+	LettersGroup="1"
+	StoneType="1"
+>
+  <Segments>
+    <Segment spawnIds="7,8,25,93" SegmentTime="11">
+    	<!-- Puzzle One -->
+    	<MonsterRequiredLetters>
+    		<string>ТЕ</string>
+    	</MonsterRequiredLetters>
+    	<MonsterAllLetters>
+    	</MonsterAllLetters>
+    	<Stones>
+    		<string>НЕ</string>
+    		<string>ТЕ</string>
+			<string>НЕ</string>
+    		<string>ТЕ</string>
+    	</Stones>
+	</Segment>
+	<Segment spawnIds="25,93,8,23" SegmentTime="11">
+		<!-- Puzzle Two -->
+		<MonsterRequiredLetters>
+			<string>ДЕ</string>
+		</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+			<string>ДЕ</string>
+			<string>ДО</string>
+        	<string>ДЕ</string>
+			<string>ДО</string>
+      	</Stones>
+    </Segment>
+	<Segment spawnIds="59,78,6,78" SegmentTime="11">
+		<!-- Puzzle Three -->
+      	<MonsterRequiredLetters>
+			<string>ЛЕ</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+			<string>ЛА</string>
+			<string>ЛА</string>
+			<string>ЛЕ</string>
+	        <string>ЛЕ</string>
+			
+      	</Stones>
+	</Segment>
+	<Segment spawnIds="61,79,7,8" SegmentTime="11">
+		<!-- Puzzle Four -->
+      	<MonsterRequiredLetters>
+			<string>СЕ</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+	        <string>СЕ</string>
+			<string>НЕ</string>
+	        <string>СЕ</string>
+			<string>НЕ</string>
+			
+      	</Stones>
+    </Segment>
+	<Segment spawnIds="59,61,7,8" SegmentTime="11">
+		<!-- Puzzle Five -->
+      	<MonsterRequiredLetters>
+			<string>ТО</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+			<string>КО</string>
+	        <string>КО</string>
+	        <string>ТО</string>
+	        <string>ТО</string>
+      	</Stones>
+	</Segment>
+  </Segments>
+</XMLLevel>

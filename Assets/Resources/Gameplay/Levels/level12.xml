@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	monsterInputType="Letter"
+	CollectableMonster=""
+	SegmentTime="11"
+	HideCallout="-1"
+	LettersGroup="1"
+	StoneType="1"
+>
+  <Segments>
+    <Segment spawnIds="28,94,7,8" SegmentTime="11">
+    	<!-- Puzzle One -->
+    	<MonsterRequiredLetters>
+    		<string>Т</string>
+    	</MonsterRequiredLetters>
+    	<MonsterAllLetters>
+    	</MonsterAllLetters>
+    	<Stones>
+    		<string>Е</string>
+    		<string>Т</string>
+			<string>Е</string>
+			<string>Т</string>
+    	</Stones>
+	</Segment>
+	<Segment spawnIds="25,93,6,7" SegmentTime="11">
+		<!-- Puzzle Two -->
+		<MonsterRequiredLetters>
+			<string>Е</string>
+		</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+        	<string>Л</string>
+        	<string>Е</string>
+			<string>Л</string>
+        	<string>Е</string>
+      	</Stones>
+    </Segment>
+	<Segment spawnIds="59,78,6,7" SegmentTime="11">
+		<!-- Puzzle Three -->
+      	<MonsterRequiredLetters>
+			<string>Д</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+			<string>Л</string>
+	        <string>Д</string>
+			<string>Л</string>
+	        <string>Д</string>
+      	</Stones>
+	</Segment>
+	<Segment spawnIds="61,79,7,8" SegmentTime="11">
+		<!-- Puzzle Four -->
+      	<MonsterRequiredLetters>
+			<string>Л</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+	        <string>Л</string>
+	        <string>Д</string>
+			<string>Д</string>
+			<string>Л</string>
+	       	
+      	</Stones>
+    </Segment>
+	<Segment spawnIds="94,93,59,61" SegmentTime="11">
+		<!-- Puzzle Five -->
+      	<MonsterRequiredLetters>
+			<string>С</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+	        <string>С</string>
+	        <string>Е</string>
+			<string>Е</string>
+			<string>С</string>
+      	</Stones>
+	</Segment>
+  </Segments>
+</XMLLevel>

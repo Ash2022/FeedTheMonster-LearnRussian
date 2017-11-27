@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	monsterInputType="Letter"
+	CollectableMonster=""
+	SegmentTime="11"
+	HideCallout="-1"
+	LettersGroup="1"
+	StoneType="1"
+>
+  <Segments>
+    <Segment spawnIds="7,8,25,93" SegmentTime="11">
+    	<!-- Puzzle One -->
+    	<MonsterRequiredLetters>
+    		<string>ДОС</string>
+    	</MonsterRequiredLetters>
+    	<MonsterAllLetters>
+    	</MonsterAllLetters>
+    	<Stones>
+    		<string>ДО</string>
+    		<string>ДОС</string>
+			<string>ДОС</string>
+    		<string>ДО</string>
+    	</Stones>
+	</Segment>
+	<Segment spawnIds="25,93,8,23" SegmentTime="11">
+		<!-- Puzzle Two -->
+		<MonsterRequiredLetters>
+			<string>ЛОД</string>
+		</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+			<string>ЛАД</string>
+			<string>ЛОД</string>
+        	<string>ЛАД</string>
+			<string>ЛОД</string>
+      	</Stones>
+    </Segment>
+	<Segment spawnIds="59,78,6,78" SegmentTime="11">
+		<!-- Puzzle Three -->
+      	<MonsterRequiredLetters>
+			<string>СЕД</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+			<string>СЕД</string>
+			<string>САД</string>
+			<string>САД</string>
+	        <string>СЕД</string>
+			
+      	</Stones>
+	</Segment>
+	<Segment spawnIds="61,79,7,8" SegmentTime="11">
+		<!-- Puzzle Four -->
+      	<MonsterRequiredLetters>
+			<string>СЕТ</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+	        <string>САК</string>
+			<string>СЕТ</string>
+			<string>САК</string>
+			<string>СЕТ</string>
+			
+      	</Stones>
+    </Segment>
+	<Segment spawnIds="59,61,7,8" SegmentTime="11">
+		<!-- Puzzle Five -->
+      	<MonsterRequiredLetters>
+			<string>НАТ</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+			<string>КОТ</string>
+	        <string>НАТ</string>
+	        <string>НАТ</string>
+	        <string>КОТ</string>
+      	</Stones>
+	</Segment>
+  </Segments>
+</XMLLevel>
