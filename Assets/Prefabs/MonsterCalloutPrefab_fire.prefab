@@ -41,7 +41,7 @@ GameObject:
   - component: {fileID: 222952245493406672}
   - component: {fileID: 114778628430925178}
   m_Layer: 12
-  m_Name: TMP SubMeshUI [troika SDF Material + LiberationSans SDF Atlas]
+  m_Name: TMP SubMeshUI [SANSUS-REGULAR SDF Material + LiberationSans SDF Atlas]
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -170,8 +170,8 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 3affd3bb4a95b6744841fa5e4cd11d8f, type: 2}
-  m_sharedMaterial: {fileID: 21824542066525654, guid: 3affd3bb4a95b6744841fa5e4cd11d8f,
+  m_fontAsset: {fileID: 11400000, guid: 70ce230803f00ec4f9736b4c33349a8f, type: 2}
+  m_sharedMaterial: {fileID: 21298267416947860, guid: 70ce230803f00ec4f9736b4c33349a8f,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -424,7 +424,7 @@ MonoBehaviour:
   m_material: {fileID: 0}
   m_sharedMaterial: {fileID: 0}
   m_isDefaultMaterial: 0
-  m_padding: 2.75
+  m_padding: 2.3
   m_canvasRenderer: {fileID: 222952245493406672}
   m_TextComponent: {fileID: 114124697746615360}
   m_materialReferenceIndex: 1

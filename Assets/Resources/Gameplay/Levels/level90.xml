@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-	monsterInputType="SoundLetter"
+	monsterInputType="Letter"
 	CollectableMonster=""
 	SegmentTime="11"
 	HideCallout="-1"
@@ -11,82 +11,62 @@
     <Segment spawnIds="82,83" SegmentTime="11">
     	<!-- Puzzle One -->
     	<MonsterRequiredLetters>
-    		<string>АС</string>
+    		<string>А</string>
     	</MonsterRequiredLetters>
     	<MonsterAllLetters>
     	</MonsterAllLetters>
     	<Stones>
-    		<string>АС</string>
-    		<string>АС</string>
-			<string>ОС</string>
-			<string>ОС</string>
-			<string>АС</string>
-			<string>ОС</string>
+    		<string>А</string>
+    		<string>М</string>
     	</Stones>
 	</Segment>
 	<Segment spawnIds="21,22" SegmentTime="11">
 		<!-- Puzzle Two -->
 		<MonsterRequiredLetters>
-			<string>МАС</string>
+			<string>М</string>
 		</MonsterRequiredLetters>
 	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
 	  	<Stones>
-        	<string>НАС</string>
-        	<string>МАС</string>
-			<string>МАС</string>
-			<string>МАС</string>
-			<string>МАС</string>
-			<string>НАС</string>
+        	<string>А</string>
+        	<string>М</string>
       	</Stones>
     </Segment>
 	<Segment spawnIds="93,94" SegmentTime="11">
 		<!-- Puzzle Three -->
       	<MonsterRequiredLetters>
-			<string>СО</string>
+			<string>К</string>
 	  	</MonsterRequiredLetters>
 	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
 	  	<Stones>
-			<string>СО</string>
-	        <string>КО</string>
-			<string>СО</string>
-			<string>СО</string>
-			<string>КО</string>
-			<string>КО</string>
+			<string>К</string>
+	        <string>А</string>
       	</Stones>
 	</Segment>
 	<Segment spawnIds="54,55" SegmentTime="11">
 		<!-- Puzzle Four -->
       	<MonsterRequiredLetters>
-			<string>МЕ</string>
+			<string>О</string>
 	  	</MonsterRequiredLetters>
 	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
 	  	<Stones>
-	        <string>КЕ</string>
-	        <string>КЕ</string>
-			<string>МЕ</string>
-	        <string>КЕ</string>
-			<string>МЕ</string>
-	        <string>МЕ</string>
+	        <string>О</string>
+	        <string>А</string>
       	</Stones>
     </Segment>
 	<Segment spawnIds="25,28,60" SegmentTime="11">
 		<!-- Puzzle Five -->
       	<MonsterRequiredLetters>
-			<string>ЛОД</string>
+			<string>Н</string>
 	  	</MonsterRequiredLetters>
 	  	<MonsterAllLetters>
 	  	</MonsterAllLetters>
 	  	<Stones>
-	        <string>ЛАД</string>
-	        <string>ЛОД</string>
-			<string>ЛОД</string>
-	        <string>ЛАД</string>
-			<string>ЛАД</string>
-	        <string>ЛОД</string>
-			
+	        <string>Н</string>
+	        <string>М</string>
+			<string bonusScore="100">BonusLetter</string>
       	</Stones>
 	</Segment>
   </Segments>
