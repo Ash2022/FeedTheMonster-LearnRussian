@@ -1,92 +1,86 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
-	monsterInputType="SoundLetter"
+	monsterInputType="Word"
 	CollectableMonster=""
-	SegmentTime="9"
-	HideCallout="3"
-	LettersGroup="4"
+	SegmentTime="13"
+	HideCallout="-1"
+	LettersGroup="1"
 	StoneType="1"
 >
-  <Segments>
-    <Segment spawnIds="" SegmentTime="10">
-    	<!-- Puzzle One -->
-    	<MonsterRequiredLetters>
-    		<string>تو</string>
-    	</MonsterRequiredLetters>
-    	<MonsterAllLetters>
-    	</MonsterAllLetters>
-    	<Stones>
-    		<string spawnId="1">تو</string>
-    		<string spawnId="21">تو</string>
-    		<string spawnId="76">فو</string>
-			<string spawnId="73">فو</string>
-			<string spawnId="22">جو</string>
-			<string spawnId="0">جو</string>
-    	</Stones>
-	</Segment>
-	<Segment spawnIds="0,1,21,22,73,76" SegmentTime="10">
+	<Segments>
+		<Segment spawnIds="77,83,82,7,8" SegmentTime="13">
+			<!-- Puzzle One -->
+			<MonsterRequiredLetters>
+				<string>ВЕ</string>
+				<string>РА</string>
+			</MonsterRequiredLetters>
+			<MonsterAllLetters>
+			</MonsterAllLetters>
+			<Stones>
+				<string>РА</string>
+				<string>ВЕ</string>
+				<string>КЕ</string>
+			</Stones>
+    </Segment>
+	<Segment spawnIds="77,83,82,7,8" SegmentTime="13">
 		<!-- Puzzle Two -->
 		<MonsterRequiredLetters>
-			<string>خو</string>
+			<string>ДОС</string>
+			<string>КА</string>
 		</MonsterRequiredLetters>
-	  	<MonsterAllLetters>
-	  	</MonsterAllLetters>
-	  	<Stones>
-        	<string>خو</string>
-        	<string>خو</string>
-        	<string>جو</string>
-			<string>جو</string>
-			<string>كو</string>
-			<string>كو</string>
-      	</Stones>
+		<MonsterAllLetters>
+		</MonsterAllLetters>
+		<Stones>
+			<string>ДОС</string>
+			<string>НА</string>
+			<string>КА</string>
+		</Stones>
     </Segment>
-	<Segment spawnIds="" SegmentTime="10">
+	<Segment spawnIds="77,83,82,7,8" SegmentTime="13">
 		<!-- Puzzle Three -->
-      	<MonsterRequiredLetters>
-			<string>صو</string>
-	  	</MonsterRequiredLetters>
-	  	<MonsterAllLetters>
-	  	</MonsterAllLetters>
-	  	<Stones>
-			<string spawnId="59">صو</string>
-	        <string spawnId="22">صو</string>
-	        <string spawnId="61">سو</string>
-			<string spawnId="18">سو</string>
-			<string spawnId="21">شو</string>
-			<string spawnId="19">شو</string>
-      	</Stones>
-	</Segment>
-	<Segment spawnIds="18,19,21,22,59,61" SegmentTime="10">
-		<!-- Puzzle Four -->
-      	<MonsterRequiredLetters>
-			<string>طو</string>
-	  	</MonsterRequiredLetters>
-	  	<MonsterAllLetters>
-	  	</MonsterAllLetters>
-	  	<Stones>
-	        <string>طو</string>
-	        <string>طو</string>
-	        <string>مو</string>
-			<string>مو</string>
-			<string>حو</string>
-			<string>حو</string>
-      	</Stones>
+		<MonsterRequiredLetters>
+			<string>Н</string>
+			<string>Е</string>
+			<string>Р</string>
+			<string>В</string>
+		</MonsterRequiredLetters>
+		<MonsterAllLetters>
+		</MonsterAllLetters>
+		<Stones>
+			<string>Н</string>
+			<string>Е</string>
+			<string>А</string>
+			<string>В</string>
+			<string>Р</string>	
+		</Stones>
     </Segment>
-	<Segment spawnIds="" SegmentTime="10">
-		<!-- Puzzle Five -->
-      	<MonsterRequiredLetters>
-			<string>لو</string>
-	  	</MonsterRequiredLetters>
-	  	<MonsterAllLetters>
-	  	</MonsterAllLetters>
-	  	<Stones>
-	        <string spawnId="4">لو</string>
-	        <string spawnId="57">لو</string>
-	        <string spawnId="91">بو</string>
-			<string spawnId="5">بو</string>
-			<string spawnId="56">تو</string>
-			<string spawnId="92">تو</string>
-      	</Stones>
+	<Segment spawnIds="77,83,82,7" SegmentTime="13">
+		<!-- Puzzle Four -->
+		<MonsterRequiredLetters>
+			<string>ВО</string>
+			<string>ДА</string>
+		</MonsterRequiredLetters>
+		<MonsterAllLetters>
+		</MonsterAllLetters>
+		<Stones>
+			<string>О</string>
+			<string>ДА</string>
+			<string>ВО</string>
+		</Stones>
 	</Segment>
+	<Segment spawnIds="55,60,82,83,54" SegmentTime="13">
+		<!-- Puzzle Five -->
+		<MonsterRequiredLetters>
+			<string>БО</string>
+			<string>КАЛ</string>
+		</MonsterRequiredLetters>
+		<MonsterAllLetters>
+		</MonsterAllLetters>
+		<Stones>
+			<string>БО</string>
+			<string>КАЛ</string>
+			<string>ДО</string>
+		</Stones>
+    </Segment>
   </Segments>
 </XMLLevel>

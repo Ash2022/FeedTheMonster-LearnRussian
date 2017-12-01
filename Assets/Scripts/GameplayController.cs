@@ -921,6 +921,28 @@ public class GameplayController : MonoBehaviour {
 */
 	void Update () {
 
+		if (Input.GetKeyUp (KeyCode.A)) {
+			
+			LoadLevel (CurrentLevelIndex + 1);
+			Debug.Log ("CURR LEVEL: " + CurrentLevelIndex);
+		}
+		if (Input.GetKeyUp (KeyCode.S)) {
+
+			LoadLevel (CurrentLevelIndex - 1);
+			Debug.Log ("CURR LEVEL: " + CurrentLevelIndex);
+		}
+		if (Input.GetKeyUp (KeyCode.Z)) {
+
+			ClearGameplay ();
+			LoadSegment (CurrentSegmentIndex + 1);
+		}
+		if (Input.GetKeyUp (KeyCode.X)) {
+
+			LoadSegment (CurrentSegmentIndex - 1);
+		}
+
+
+
 		if (!IsPause && !IsPausePopup) {
 			if (SegmentToLoad > -1) {
 				LoadSegment (SegmentToLoad);
