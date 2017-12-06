@@ -2,109 +2,103 @@
 <XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 	monsterInputType="Letter"
 	CollectableMonster=""
-	SegmentTime="8"
-	HideCallout="1"
-	LettersGroup="5"
+	SegmentTime="11"
+	HideCallout="-1"
+	LettersGroup="1"
 	StoneType="1"
 >
   <Segments>
-    <Segment spawnIds="" SegmentTime="9">
+    <Segment spawnIds="92,22,27,26,21,91,7,8,9,82" SegmentTime="11">
     	<!-- Puzzle One -->
     	<MonsterRequiredLetters>
-    		<string>ض</string>
+    		<string>НУ</string>
     	</MonsterRequiredLetters>
     	<MonsterAllLetters>
     	</MonsterAllLetters>
     	<Stones>
-    		<string spawnId="72">ض</string>
-    		<string spawnId="95">ض</string>
-    		<string spawnId="96">ﺺ</string>
-			<string spawnId="54">ﺺ</string>
-			<string spawnId="27">ﻑ</string>
-			<string spawnId="2">ﻑ</string>
-			<string spawnId="69">ق</string>
-			<string spawnId="26">ق</string>
-			<string spawnId="55">FreezeTime</string>
-			<string spawnId="3" bonusScore="275" >BonusLetter</string>
+    		<string>ОН</string>
+    		<string>БО</string>
+			<string>НУ</string>
+			<string>ОН</string>
+			<string>НУ</string>
+			<string>ОН</string>
+			<string>БО</string>
+			<string>БО</string>
+			<string>НУ</string>
     	</Stones>
 	</Segment>
-	<Segment spawnIds="" SegmentTime="9">
-		<!-- Puzzle Two -->
-		<MonsterRequiredLetters>
-			<string>غ</string>
-		</MonsterRequiredLetters>
-	  	<MonsterAllLetters>
-	  	</MonsterAllLetters>
-	  	<Stones>
-        	<string spawnId="22">غ</string>
-        	<string spawnId="74">غ</string>
-			<string spawnId="15">غ</string>
-        	<string spawnId="60">ع</string>
-			<string spawnId="14">ع</string>
-			<string spawnId="75">ع</string>
-			<string spawnId="21">خ</string>
-			<string spawnId="11">خ</string>
-			<string spawnId="12">خ</string>
-      	</Stones>
-    </Segment>
-	<Segment spawnIds="" SegmentTime="9">
-		<!-- Puzzle Three -->
-      	<MonsterRequiredLetters>
-			<string>ذ</string>
-	  	</MonsterRequiredLetters>
-	  	<MonsterAllLetters>
-	  	</MonsterAllLetters>
-	  	<Stones>
-			<string spawnId="69">ذ</string>
-	        <string spawnId="96">ذ</string>
-	        <string spawnId="95">ﺧ</string>
-			<string spawnId="55">ﺧ</string>
-			<string spawnId="26">ز</string>
-			<string spawnId="3">ز</string>
-			<string spawnId="72">ﻧ</string>
-			<string spawnId="27">ﻧ</string>
-			<string spawnId="54">FreezeTime</string>
-			<string spawnId="2" bonusScore="275" >BonusLetter</string>
-      	</Stones>
+	<Segment spawnIds="92,22,27,26,21,91,7,8,9" SegmentTime="11">
+    	<!-- Puzzle Two -->
+    	<MonsterRequiredLetters>
+    		<string>ТУ</string>
+    	</MonsterRequiredLetters>
+    	<MonsterAllLetters>
+    	</MonsterAllLetters>
+    	<Stones>
+    		<string>ТУ</string>
+    		<string>НУ</string>
+			<string>НУ</string>
+			<string>ТУ</string>
+			<string bonusScore="125">BonusLetter</string>
+			<string bonusScore="125">BonusLetter</string>
+    	</Stones>
 	</Segment>
-	<Segment spawnIds="22,74,15,60,14,75,21,11,12" SegmentTime="9">
-		<!-- Puzzle Four -->
-      	<MonsterRequiredLetters>
-			<string>ض</string>
-	  	</MonsterRequiredLetters>
-	  	<MonsterAllLetters>
-	  	</MonsterAllLetters>
-	  	<Stones>
-	        <string>ض</string>
-	        <string>ض</string>
-			<string>ض</string>
-	        <string>صو</string>
-			<string>صو</string>
-			<string>صو</string>
-			<string>ق</string>
-			<string>ق</string>
-			<string>ق</string>
-      	</Stones>
-    </Segment>
-	<Segment spawnIds="" SegmentTime="9">
-		<!-- Puzzle Five -->
-      	<MonsterRequiredLetters>
-			<string>هـ</string>
-	  	</MonsterRequiredLetters>
-	  	<MonsterAllLetters>
-	  	</MonsterAllLetters>
-	  	<Stones>
-	        <string spawnId="72">هـ</string>
-	        <string spawnId="95">هـ</string>
-	        <string spawnId="96">ﻛ</string>
-			<string spawnId="54">ﻛ</string>
-			<string spawnId="27">ﻂ</string>
-			<string spawnId="2">ﻂ</string>
-			<string spawnId="69">ع</string>
-			<string spawnId="26">ع</string>
-			<string spawnId="55">FreezeTime</string>
-			<string spawnId="3" bonusScore="275" >BonusLetter</string>
-      	</Stones>
+	<Segment spawnIds="92,22,27,26,21,91,7,8,9,1" SegmentTime="11">
+    	<!-- Puzzle Three -->
+    	<MonsterRequiredLetters>
+    		<string>ДУ</string>
+    	</MonsterRequiredLetters>
+    	<MonsterAllLetters>
+    	</MonsterAllLetters>
+    	<Stones>
+    		<string>ДУ</string>
+    		<string>ДУ</string>
+			<string>ГУ</string>
+			<string>ДЕ</string>
+			<string>ГУ</string>
+			<string>ДУ</string>
+			<string>ДЕ</string>
+			<string>ГУ</string>
+			<string>ДЕ</string>
+    	</Stones>
+	</Segment>
+	<Segment spawnIds="92,22,27,26,21,91,7,8,9" SegmentTime="11">
+    	<!-- Puzzle Four -->
+    	<MonsterRequiredLetters>
+    		<string>ЛУ</string>
+    	</MonsterRequiredLetters>
+    	<MonsterAllLetters>
+    	</MonsterAllLetters>
+    	<Stones>
+    		<string>ЛО</string>
+    		<string>ЛУ</string>
+			<string>ЛО</string>
+			<string>ЛО</string>
+			<string>ВА</string>
+			<string>ВА</string>
+			<string>ЛУ</string>
+			<string>ВА</string>
+			<string>ЛУ</string>
+    	</Stones>
+	</Segment>
+	<Segment spawnIds="92,22,27,26,21,91,7,8,9" SegmentTime="11">
+    	<!-- Puzzle Five -->
+    	<MonsterRequiredLetters>
+    		<string>ПУ</string>
+    	</MonsterRequiredLetters>
+    	<MonsterAllLetters>
+    	</MonsterAllLetters>
+    	<Stones>
+    		<string>КО</string>
+    		<string>КО</string>
+			<string>ШУ</string>
+    		<string>КО</string>
+			<string>ШУ</string>
+    		<string>ПУ</string>
+			<string>ПУ</string>
+			<string>ШУ</string>
+    		<string>ПУ</string>
+    	</Stones>
 	</Segment>
   </Segments>
 </XMLLevel>
