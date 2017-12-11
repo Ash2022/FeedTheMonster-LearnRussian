@@ -2,98 +2,100 @@
 <XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 	monsterInputType="LetterInWord"
 	CollectableMonster=""
-	SegmentTime="9"
-	HideCallout="1"
-	LettersGroup="6"
-	StoneType="2"
+	SegmentTime="11"
+	HideCallout="-1"
+	LettersGroup="1"
+	StoneType="1"
 >
   <Segments>
-    <Segment spawnIds="" SegmentTime="9">
+    <Segment spawnIds="76,57,61,95,56,73" SegmentTime="11">
       <!-- Puzzle One -->
 	  <MonsterRequiredLetters>
-		<string>ـدا</string>
+		<string>ЧУ</string>
 	  </MonsterRequiredLetters>
 	  <MonsterAllLetters>
-		<string>حَـ</string>
+		<string>ДО</string>
 		<string>X</string>
-		<string>ئِق</string>
 	  </MonsterAllLetters>
 	  <Stones>
-        <string spawnId="79">ـدا</string>
-        <string spawnId="78">ـرا</string>
-        <string spawnId="87">جا</string>
-		<string spawnId="86">ـكا</string>
-		<string spawnId="60">غَ</string>
+        <string>ДУ</string>
+        <string>ЧУ</string>
+        <string>МУ</string>
+		<string>ДУ</string>
+        <string>МУ</string>
+        <string>ЧУ</string>
       </Stones>
     </Segment>
-	<Segment spawnIds="" SegmentTime="9">
+	<Segment spawnIds="76,57,61,95,56,73,8" SegmentTime="11">
       <!-- Puzzle Two -->
 	  <MonsterRequiredLetters>
-		<string>ـحا</string>
+		<string>ЛЯ</string>
 	  </MonsterRequiredLetters>
 	  <MonsterAllLetters>
-		<string>يُـ</string>
+		<string>ГУШКА</string>
 		<string>X</string>
-		<string>فِـ</string>
-		<string>ـظُ</string>
 	  </MonsterAllLetters>
 	  <Stones>
-        <string spawnId="87">ـحا</string>
-        <string spawnId="86">ـكا</string>
-        <string spawnId="78">ـخا</string>
-		<string spawnId="79">يا</string>
+        <string>ЛЯ</string>
+        <string>МА</string>
+        <string>МА</string>
+		<string>БА</string>
+        <string>ЛЯ</string>
+        <string>МА</string>
       </Stones>
     </Segment>
-	<Segment spawnIds="" SegmentTime="9">
+	<Segment spawnIds="76,57,61,95,56,73" SegmentTime="11">
       <!-- Puzzle Three -->
 	  <MonsterRequiredLetters>
-		<string>يَشْـ</string>
+		<string>МЯ</string>
 	  </MonsterRequiredLetters>
 	  <MonsterAllLetters>
+		<string>СО</string>
 		<string>X</string>
-		<string>ـرَ</string>
-		<string>بُ</string>
 	  </MonsterAllLetters>
 	  <Stones>
-        <string spawnId="17">يَشْـ</string>
-        <string spawnId="93">يَسْـ</string>
-        <string spawnId="94">يَدْ</string>
-		<string spawnId="16">يَصْـ</string>
+        <string>ЛЯ</string>
+        <string>ЛЯ</string>
+        <string>МЯ</string>
+		<string>ЗА</string>
+        <string>МЯ</string>
+        <string>ЗА</string>
       </Stones>
     </Segment>
-	<Segment spawnIds="" SegmentTime="9">
+	<Segment spawnIds="76,57,61,95,56,73" SegmentTime="11">
       <!-- Puzzle Four -->
 	  <MonsterRequiredLetters>
-		<string>يات</string>
+		<string>ЯК</string>
 	  </MonsterRequiredLetters>
 	  <MonsterAllLetters>
-		<string>حِـ</string>
-		<string>ـكا</string>
 		<string>X</string>
+		<string>МА</string>
 	  </MonsterAllLetters>
 	  <Stones>
-        <string spawnId="7">يات</string>
-        <string spawnId="78">ـياب</string>
-        <string spawnId="79">ـياد</string>
-		<string spawnId="6">ـهام</string>
+        <string>НЯ</string>
+        <string>ЯК</string>
+        <string>ЯК</string>
+		<string>АЙ</string>
+        <string>НЯ</string>
+        <string>АЙ</string>
       </Stones>
     </Segment>
-	<Segment spawnIds="" SegmentTime="9">
+	<Segment spawnIds="76,57,61,95,56,73" SegmentTime="11">
       <!-- Puzzle Five -->
 	  <MonsterRequiredLetters>
-		<string>ـثا</string>
+		<string>ЗА</string>
 	  </MonsterRequiredLetters>
 	  <MonsterAllLetters>
-		<string>تَـ</string>
+		<string>МОК</string>
 		<string>X</string>
-		<string>ءَ</string>
-		<string>بَ</string>
 	  </MonsterAllLetters>
 	  <Stones>
-        <string spawnId="20">ـثا</string>
-        <string spawnId="23">ـخا</string>
-        <string spawnId="74">يا</string>
-		<string spawnId="75">ـكا</string>
+        <string>ОЗ</string>
+        <string>ЗА</string>
+        <string>ЗА</string>
+		<string>ОЗ</string>
+        <string>НА</string>
+        <string>НА</string>
       </Stones>
     </Segment>
   </Segments>
