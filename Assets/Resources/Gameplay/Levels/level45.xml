@@ -23,7 +23,7 @@
 				<string>КА</string>
 			</Stones>
     </Segment>
-	<Segment spawnIds="90,55,96,7,8" SegmentTime="13">
+	<Segment spawnIds="90,55,96,26,8" SegmentTime="13">
 		<!-- Puzzle Two -->
 		<MonsterRequiredLetters>
 			<string>БЕЛ</string>
@@ -70,7 +70,7 @@
 			<string>А</string>
 		</Stones>
 	</Segment>
-	<Segment spawnIds="61,94,45,7" SegmentTime="13">
+	<Segment spawnIds="61,94,36" SegmentTime="13">
 		<!-- Puzzle Five -->
 		<MonsterRequiredLetters>
 			<string>ПЕ</string>

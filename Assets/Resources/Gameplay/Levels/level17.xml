@@ -8,7 +8,7 @@
 	StoneType="1"
 >
   <Segments>
-    <Segment spawnIds="82,83,21,22" SegmentTime="11">
+    <Segment spawnIds="7,6,25,93" SegmentTime="11">
     	<!-- Puzzle One -->
     	<MonsterRequiredLetters>
     		<string>ТА</string>
@@ -36,7 +36,7 @@
 			<string>ДА</string>
       	</Stones>
     </Segment>
-	<Segment spawnIds="93,94,82,22" SegmentTime="11">
+	<Segment spawnIds="93,92,82,22" SegmentTime="11">
 		<!-- Puzzle Three -->
       	<MonsterRequiredLetters>
 			<string>СА</string>
@@ -64,7 +64,7 @@
 			<string>КЕ</string>
       	</Stones>
     </Segment>
-	<Segment spawnIds="25,28,60,87" SegmentTime="11">
+	<Segment spawnIds="25,57,60,87" SegmentTime="11">
 		<!-- Puzzle Five -->
       	<MonsterRequiredLetters>
 			<string>ЛА</string>

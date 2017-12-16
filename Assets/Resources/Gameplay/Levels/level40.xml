@@ -8,7 +8,7 @@
 	StoneType="1"
 >
   <Segments>
-    <Segment spawnIds="76,57,61,95,56,73" SegmentTime="11">
+    <Segment spawnIds="76,57,61,25,56,73" SegmentTime="11">
       <!-- Puzzle One -->
 	  <MonsterRequiredLetters>
 		<string>ВЕ</string>
@@ -26,7 +26,7 @@
 		<string bonusScore="100">FireWrongLetter</string>
       </Stones>
     </Segment>
-	<Segment spawnIds="76,57,61,95,56,73" SegmentTime="11">
+	<Segment spawnIds="76,57,61,95,26,73" SegmentTime="11">
       <!-- Puzzle Two -->
 	  <MonsterRequiredLetters>
 		<string>ПИР</string>
@@ -45,7 +45,7 @@
 		<string>SlowMovment</string>
       </Stones>
     </Segment>
-	<Segment spawnIds="76,57,61,95,56,73" SegmentTime="11">
+	<Segment spawnIds="60,22,91,7,78,1" SegmentTime="11">
       <!-- Puzzle Three -->
 	  <MonsterRequiredLetters>
 		<string>ПАР</string>
@@ -63,7 +63,7 @@
 		<string>НАТ</string>
       </Stones>
     </Segment>
-	<Segment spawnIds="76,57,61,95,56,73" SegmentTime="11">
+	<Segment spawnIds="92,26,21,36,8,22" SegmentTime="11">
       <!-- Puzzle Four -->
 	  <MonsterRequiredLetters>
 		<string>ВА</string>
@@ -81,7 +81,7 @@
         <string>ВА</string>
       </Stones>
     </Segment>
-	<Segment spawnIds="76,57,61,95,56,73" SegmentTime="11">
+	<Segment spawnIds="90,22,26,21,8,9" SegmentTime="11">
       <!-- Puzzle Five -->
 	  <MonsterRequiredLetters>
 		<string>ДОС</string>

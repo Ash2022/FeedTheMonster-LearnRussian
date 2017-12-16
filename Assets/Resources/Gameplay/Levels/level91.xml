@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	monsterInputType="Letter"
+	CollectableMonster=""
+	SegmentTime="11"
+	HideCallout="-1"
+	LettersGroup="1"
+	StoneType="1"
+>
+  <Segments>
+    <Segment spawnIds="64, 72, 76, 57, 28, 25, 56, 73, 69, 63" SegmentTime="11">
+    	<!-- Puzzle One -->
+    	<MonsterRequiredLetters>
+    		<string>ЖИ</string>
+    	</MonsterRequiredLetters>
+    	<MonsterAllLetters>
+    	</MonsterAllLetters>
+    	<Stones>
+    		<string>ЖА</string>
+    		<string>ЖИ</string>
+			<string>БИ</string>
+			<string>ЖА</string>
+			<string>ЖИ</string>
+			<string>ЖИ</string>
+			<string>БИ</string>
+			<string>БИ</string>
+			<string>ЖА</string>
+    	</Stones>
+	</Segment>
+	<Segment spawnIds="69,18,96,26,27,95,19,72,3" SegmentTime="11">
+    	<!-- Puzzle Two -->
+    	<MonsterRequiredLetters>
+    		<string>ЖА</string>
+    	</MonsterRequiredLetters>
+    	<MonsterAllLetters>
+    	</MonsterAllLetters>
+    	<Stones>
+    		<string>ЖА</string>
+    		<string>ЖА</string>
+			<string>ПА</string>
+			<string>ПА</string>
+			<string>ЖА</string>
+			<string>ПА</string>
+			<string bonusScore="125">BonusLetter</string>
+			<string bonusScore="125">BonusLetter</string>
+    	</Stones>
+	</Segment>
+	<Segment spawnIds="32,14,62,73,20,57,76,58,15,26" SegmentTime="11">
+    	<!-- Puzzle Three -->
+    	<MonsterRequiredLetters>
+    		<string>ЖЕ</string>
+    	</MonsterRequiredLetters>
+    	<MonsterAllLetters>
+    	</MonsterAllLetters>
+    	<Stones>
+    		<string>ДУ</string>
+    		<string>ЖЕ</string>
+			<string>ПЕ</string>
+			<string>ПЕ</string>
+			<string>ЖЕ</string>
+			<string>ДУ</string>
+			<string>ПЕ</string>
+			<string>ДУ</string>
+			<string>ЖЕ</string>
+    	</Stones>
+	</Segment>
+	<Segment spawnIds="32,14,62,73,20,23,76,58,15,33" SegmentTime="11">
+    	<!-- Puzzle Four -->
+    	<MonsterRequiredLetters>
+    		<string>ЖУ</string>
+    	</MonsterRequiredLetters>
+    	<MonsterAllLetters>
+    	</MonsterAllLetters>
+    	<Stones>
+    		<string>ЖУ</string>
+    		<string>ФУ</string>
+			<string>АР</string>
+			<string>ФУ</string>
+			<string>АР</string>
+			<string>ЖУ</string>
+			<string>АР</string>
+			<string>ФУ</string>
+			<string>ЖУ</string>
+    	</Stones>
+	</Segment>
+	<Segment spawnIds="12, 90, 19,23, 87,86,20,18,89, 11" SegmentTime="11">
+    	<!-- Puzzle Five -->
+    	<MonsterRequiredLetters>
+    		<string>ЁЖ</string>
+    	</MonsterRequiredLetters>
+    	<MonsterAllLetters>
+    	</MonsterAllLetters>
+    	<Stones>
+    		<string>ЧИ</string>
+    		<string>ЛЁ</string>
+			<string>ЁЖ</string>
+    		<string>ЁЖ</string>
+			<string>ЁЖ</string>
+    		<string>ЧИ</string>
+			<string>ЧИ</string>
+			<string>ЛЁ</string>
+			<string>ЛЁ</string>
+    	</Stones>
+	</Segment>
+  </Segments>
+</XMLLevel>

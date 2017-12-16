@@ -66,7 +66,7 @@
 			<string>НАТ</string>
 		</Stones>
 	</Segment>
-	<Segment spawnIds="61,94,45,7" SegmentTime="13">
+	<Segment spawnIds="61,94,45,6" SegmentTime="13">
 		<!-- Puzzle Five -->
 		<MonsterRequiredLetters>
 			<string>КА</string>

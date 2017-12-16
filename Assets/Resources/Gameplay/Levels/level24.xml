@@ -50,7 +50,7 @@
 			<string>ДА</string>
 		</Stones>
     </Segment>
-	<Segment spawnIds="77,83,82" SegmentTime="13">
+	<Segment spawnIds="60,83,82" SegmentTime="13">
 		<!-- Puzzle Four -->
 		<MonsterRequiredLetters>
 			<string>О</string>

@@ -52,7 +52,7 @@
 			<string>КУ</string>
 		</Stones>
     </Segment>
-	<Segment spawnIds="77,83,82,7" SegmentTime="13">
+	<Segment spawnIds="28,83,82,7" SegmentTime="13">
 		<!-- Puzzle Four -->
 		<MonsterRequiredLetters>
 			<string>МЫШ</string>

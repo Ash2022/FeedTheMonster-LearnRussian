@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	monsterInputType="SoundWord"
+	CollectableMonster=""
+	SegmentTime="13"
+	HideCallout="-1"
+	LettersGroup="2"
+	StoneType="1"
+>
+	<Segments>
+		<Segment spawnIds="21,60,22" SegmentTime="13">
+			<!-- Puzzle One -->
+			<MonsterRequiredLetters>
+				<string>МУ</string>
+				<string>ХА</string>
+			</MonsterRequiredLetters>
+			<MonsterAllLetters>
+			</MonsterAllLetters>
+			<Stones>
+				<string>ХУ</string>
+				<string>МУ</string>
+				<string>ХА</string>
+				<string>НА</string>
+			</Stones>
+    </Segment>
+	<Segment spawnIds="90,55,96" SegmentTime="13">
+		<!-- Puzzle Two -->
+		<MonsterRequiredLetters>
+			<string>ТЁ</string>
+			<string>ТЯ</string>
+		</MonsterRequiredLetters>
+		<MonsterAllLetters>
+		</MonsterAllLetters>
+		<Stones>
+			<string>ТЁ</string>
+			<string>НЯ</string>
+			<string>ТЯ</string>
+			<string bonusScore="125">BonusLetter</string>
+			<string bonusScore="125">BonusLetter</string>
+		</Stones>
+    </Segment>
+	<Segment spawnIds="89,54,95,7" SegmentTime="13">
+		<!-- Puzzle Three -->
+		<MonsterRequiredLetters>
+			<string>ЛУ</string>
+			<string>ЖА</string>
+		</MonsterRequiredLetters>
+		<MonsterAllLetters>
+		</MonsterAllLetters>
+		<Stones>
+			<string>ЖУ</string>
+			<string>ЖА</string>
+			<string>ЛУ</string>
+			<string>КУ</string>
+		</Stones>
+    </Segment>
+	<Segment spawnIds="59,93,36" SegmentTime="13">
+		<!-- Puzzle Four -->
+		<MonsterRequiredLetters>
+			<string>Ю</string>
+			<string>ЛА</string>
+		</MonsterRequiredLetters>
+		<MonsterAllLetters>
+		</MonsterAllLetters>
+		<Stones>
+			<string>Ю</string>
+			<string>У</string>
+			<string>НА</string>
+			<string>ЛА</string>
+		</Stones>
+	</Segment>
+	<Segment spawnIds="61,94,45,7" SegmentTime="13">
+		<!-- Puzzle Five -->
+		<MonsterRequiredLetters>
+			<string>ДУ</string>
+			<string>ХИ</string>
+		</MonsterRequiredLetters>
+		<MonsterAllLetters>
+		</MonsterAllLetters>
+		<Stones>
+			<string>ФУ</string>
+			<string>ДУ</string>
+			<string>ВИ</string>
+			<string>ХИ</string>
+			<string>SlowMovment</string>
+		</Stones>
+    </Segment>
+  </Segments>
+</XMLLevel>

@@ -8,7 +8,7 @@
 	StoneType="1"
 >
   <Segments>
-    <Segment spawnIds="92,22,27,26,21,91,7,8,9,82" SegmentTime="11">
+    <Segment spawnIds="69,18,96,26,27,95,19,72,3" SegmentTime="11">
     	<!-- Puzzle One -->
     	<MonsterRequiredLetters>
     		<string>ЗА</string>
@@ -28,7 +28,7 @@
 			<string>MagnetLetter</string>
     	</Stones>
 	</Segment>
-	<Segment spawnIds="92,22,27,26,21,91,7,8,9" SegmentTime="11">
+	<Segment spawnIds="69,18,96,26,27,95,19,72,3" SegmentTime="11">
     	<!-- Puzzle Two -->
     	<MonsterRequiredLetters>
     		<string>ЗО</string>
@@ -46,7 +46,7 @@
 			<string bonusScore="100">FireWrongLetter</string>
     	</Stones>
 	</Segment>
-	<Segment spawnIds="92,22,27,26,21,91,7,8,9,1" SegmentTime="11">
+	<Segment spawnIds="12, 90, 19,23, 87,86,20,18,89, 11" SegmentTime="11">
     	<!-- Puzzle Three -->
     	<MonsterRequiredLetters>
     		<string>ЗИ</string>
@@ -66,7 +66,7 @@
 			
     	</Stones>
 	</Segment>
-	<Segment spawnIds="92,22,27,26,21,91,7,8,9" SegmentTime="11">
+	<Segment spawnIds="32,14,62,73,20,23,76,58,15,33" SegmentTime="11">
     	<!-- Puzzle Four -->
     	<MonsterRequiredLetters>
     		<string>ЗУ</string>
@@ -85,7 +85,7 @@
 			<string>МУ</string>
     	</Stones>
 	</Segment>
-	<Segment spawnIds="92,22,27,26,21,91,7,8,9" SegmentTime="11">
+	<Segment spawnIds="32,14,62,73,20,57,76,58,15,26" SegmentTime="11">
     	<!-- Puzzle Five -->
     	<MonsterRequiredLetters>
     		<string>ЗЕ</string>

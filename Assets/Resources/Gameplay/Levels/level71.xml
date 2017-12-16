@@ -8,7 +8,7 @@
 	StoneType="1"
 >
   <Segments>
-    <Segment spawnIds="76,57,61,95,56,73" SegmentTime="11">
+    <Segment spawnIds="76,57,61,58,56,73" SegmentTime="11">
     	<!-- Puzzle One -->
     	<MonsterRequiredLetters>
     		<string>ЯК</string>
@@ -24,7 +24,7 @@
 			<string>ЯК</string>
     	</Stones>
 	</Segment>
-	<Segment spawnIds="76,57,61,95,56,73" SegmentTime="11">
+	<Segment spawnIds="64, 72, 56, 73, 69, 63" SegmentTime="11">
 		<!-- Puzzle Two -->
 		<MonsterRequiredLetters>
 			<string>ЛЯ</string>
@@ -40,7 +40,7 @@
 			<string>ЛЯ</string>
       	</Stones>
     </Segment>
-	<Segment spawnIds="76,57,61,95,56,73" SegmentTime="11">
+	<Segment spawnIds="26,21,91,7,28,9" SegmentTime="11">
 		<!-- Puzzle Three -->
       	<MonsterRequiredLetters>
 			<string>ЧУ</string>
@@ -56,7 +56,7 @@
 			<string>ЧУ</string>
       	</Stones>
 	</Segment>
-	<Segment spawnIds="76,57,61,95,56,73" SegmentTime="11">
+	<Segment spawnIds="90,22,27,95,8,9" SegmentTime="11">
 		<!-- Puzzle Four -->
       	<MonsterRequiredLetters>
 			<string>ЗА</string>
@@ -72,7 +72,7 @@
 	        <string>НА</string>
       	</Stones>
     </Segment>
-	<Segment spawnIds="76,57,61,95,56,73" SegmentTime="11">
+	<Segment spawnIds="76, 57, 28, 56, 73, 69" SegmentTime="11">
 		<!-- Puzzle Five -->
       	<MonsterRequiredLetters>
 			<string>МЯ</string>

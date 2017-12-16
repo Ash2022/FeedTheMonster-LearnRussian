@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	monsterInputType="SoundWord"
+	CollectableMonster=""
+	SegmentTime="13"
+	HideCallout="-1"
+	LettersGroup="2"
+	StoneType="1"
+>
+	<Segments>
+		<Segment spawnIds="21,60,22" SegmentTime="13">
+			<!-- Puzzle One -->
+			<MonsterRequiredLetters>
+				<string>ДОЧ</string>
+				<string>КА</string>
+			</MonsterRequiredLetters>
+			<MonsterAllLetters>
+			</MonsterAllLetters>
+			<Stones>
+				<string>КА</string>
+				<string>ДОЧ</string>
+				<string>ПА</string>
+			</Stones>
+    </Segment>
+	<Segment spawnIds="17,94 ,29,33" SegmentTime="13">
+		<!-- Puzzle Two -->
+		<MonsterRequiredLetters>
+			<string>КА</string>
+			<string>ТУШ</string>
+			<string>КА</string>
+		</MonsterRequiredLetters>
+		<MonsterAllLetters>
+		</MonsterAllLetters>
+		<Stones>
+			<string>КА</string>
+			<string>КУ</string>
+			<string>ТУШ</string>
+			<string>КА</string>
+		</Stones>
+    </Segment>
+	<Segment spawnIds="89,54,95" SegmentTime="13">
+		<!-- Puzzle Three -->
+		<MonsterRequiredLetters>
+			<string>ГРУ</string>
+			<string>ША</string>
+		</MonsterRequiredLetters>
+		<MonsterAllLetters>
+		</MonsterAllLetters>
+		<Stones>
+			<string>ШИ</string>
+			<string>ША</string>
+			<string>ГРУ</string>
+		</Stones>
+    </Segment>
+	<Segment spawnIds="76,57,61,7,56" SegmentTime="13">
+		<!-- Puzzle Four -->
+		<MonsterRequiredLetters>
+			<string>МА</string>
+			<string>КА</string>
+			<string>РО</string>
+			<string>НЫ</string>
+		</MonsterRequiredLetters>
+		<MonsterAllLetters>
+		</MonsterAllLetters>
+		<Stones>
+			<string>КА</string>
+			<string>МА</string>
+			<string>РО</string>
+			<string>РУ</string>
+			<string>НЫ</string>
+		</Stones>
+	</Segment>
+	<Segment spawnIds="61,94,45" SegmentTime="13">
+		<!-- Puzzle Five -->
+		<MonsterRequiredLetters>
+			<string>ВИШ</string>
+			<string>НЯ</string>
+		</MonsterRequiredLetters>
+		<MonsterAllLetters>
+		</MonsterAllLetters>
+		<Stones>
+			<string>ЧИЖ</string>
+			<string>НЯ</string>
+			<string>ВИШ</string>
+		</Stones>
+    </Segment>
+  </Segments>
+</XMLLevel>

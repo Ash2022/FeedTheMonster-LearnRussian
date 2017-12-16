@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+	monsterInputType="Letter"
+	CollectableMonster=""
+	SegmentTime="11"
+	HideCallout="-1"
+	LettersGroup="1"
+	StoneType="1"
+>
+  <Segments>
+    <Segment spawnIds="76,57,61,58,56,73" SegmentTime="11">
+    	<!-- Puzzle One -->
+    	<MonsterRequiredLetters>
+    		<string>Э</string>
+    	</MonsterRequiredLetters>
+    	<MonsterAllLetters>
+    	</MonsterAllLetters>
+    	<Stones>
+    		<string>А</string>
+    		<string>О</string>
+			<string>Э</string>
+			<string>У</string>
+    	</Stones>
+	</Segment>
+	<Segment spawnIds="64, 72, 56, 73, 69, 63" SegmentTime="11">
+		<!-- Puzzle Two -->
+		<MonsterRequiredLetters>
+			<string>Ц</string>
+		</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+        	<string>Ф</string>
+        	<string>П</string>
+			<string>Ц</string>
+			<string>В</string>
+      	</Stones>
+    </Segment>
+	<Segment spawnIds="26,21,91,7,28,9" SegmentTime="11">
+		<!-- Puzzle Three -->
+      	<MonsterRequiredLetters>
+			<string>Щ</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+			<string>Ы</string>
+	        <string>Щ</string>
+			<string>М</string>
+			<string>Ш</string>
+
+      	</Stones>
+	</Segment>
+	<Segment spawnIds="90,22,27,95,8,9" SegmentTime="11">
+		<!-- Puzzle Four -->
+      	<MonsterRequiredLetters>
+			<string>Ъ</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+	        <string>Ъ</string>
+	        <string>Ы</string>
+			<string>Д</string>
+	        <string>Ь</string>
+      	</Stones>
+    </Segment>
+	<Segment spawnIds="76, 57, 28, 56, 73, 69" SegmentTime="11">
+		<!-- Puzzle Five -->
+      	<MonsterRequiredLetters>
+			<string>Ц</string>
+	  	</MonsterRequiredLetters>
+	  	<MonsterAllLetters>
+	  	</MonsterAllLetters>
+	  	<Stones>
+			<string>Д</string>
+	        <string>З</string>
+			<string>Ц</string>
+	        <string>Ч</string>
+			<string>Ц</string>
+      	</Stones>
+	</Segment>
+  </Segments>
+</XMLLevel>

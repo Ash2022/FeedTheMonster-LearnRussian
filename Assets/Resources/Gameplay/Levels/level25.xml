@@ -8,7 +8,7 @@
 	StoneType="1"
 >
 	<Segments>
-		<Segment spawnIds="77,83,82,7,8" SegmentTime="13">
+		<Segment spawnIds="89,83,82,7,8" SegmentTime="13">
 			<!-- Puzzle One -->
 			<MonsterRequiredLetters>
 				<string>ДОС</string>
@@ -41,7 +41,7 @@
 			<string>НА</string>
 		</Stones>
     </Segment>
-	<Segment spawnIds="77,83,82,7,8" SegmentTime="13">
+	<Segment spawnIds="6,83,82,7,8" SegmentTime="13">
 		<!-- Puzzle Three -->
 		<MonsterRequiredLetters>
 			<string>СОС</string>
