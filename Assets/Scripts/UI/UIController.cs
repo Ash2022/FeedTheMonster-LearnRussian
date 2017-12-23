@@ -24,6 +24,8 @@ public class UIController : MonoBehaviour {
 	public GameObject MonsterSelectionPanel;
 	public GameObject ParentsReportPanel;
 
+	[SerializeField]GameObject	PurchasePanel=null;
+
 	public Text PuzzleCountdown;
 
 	public GameObject LevelEndPopup;
@@ -122,6 +124,14 @@ public class UIController : MonoBehaviour {
 		//Debug.Log ("ShowPanel " + mCurrentPanel);
 	}
 
+	public void ShowPurchasePanel()
+	{
+
+		PurchasePanel.SetActive (true);
+		PurchasePanel.GetComponent<PurchaseController> ().Init ();
+
+	}
+
 	public void ShowPanelWithoutTransitionEffect(GameObject panel)
 	{
 		mNextPanel = panel;
@@ -176,7 +186,17 @@ public class UIController : MonoBehaviour {
 
 	public void LevelButtonClick(int levelIndex)
 	{
-		GoToLevel (levelIndex);
+		if (levelIndex > 3)
+		{
+			
+			//test if already bought (in the player prefs)
+			//check the flag for purchase in the IAP controller
+
+			//if both false - show buy page - else play
+		}
+		//	ShowPurchasePanel ();
+		//else
+			GoToLevel (levelIndex);
 	}
 
 	public void RetryLevelClickConfirm()
@@ -243,14 +263,19 @@ public class UIController : MonoBehaviour {
 	{
 		GameplayController.Instance.CurrentLevelIndex = Mathf.Min(levelIndex, GameplayController.Instance.NumOfLevels - 1);
 
+
+
 		if (monsterSelection && UserInfo.Instance.CollectionLength > 0) {
 //			GameplayController.Instance.ReaplaceBackground = false;
 			ShowPanel (MonsterSelectionPanel);
-		} else {
+		} else
+		{
 			if (TutorialController.Instance != null) {
 				TutorialController.Instance.EndTutorial ();
 			}
-			ShowPanel (GamePanel);
+
+
+				ShowPanel (GamePanel);
 		}
 	}
 

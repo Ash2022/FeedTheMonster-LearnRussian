@@ -202,6 +202,7 @@ public class GameplayController : MonoBehaviour {
 	BonusPuzzle bonusPuzzlePopup;
 
 
+
 	public float calcSpeed(float mainSpeed)
 	{
 		if (slowBoosterDuration > 0) {
@@ -459,52 +460,54 @@ public class GameplayController : MonoBehaviour {
 	public void LoadLevel(int levelIndex)
 	{
 		
-		ClearGameplay ();
+			ClearGameplay ();
 
-		if (CurrentLevel.shuffleSegment) {
-			CurrentLevel.ShuffleSegments ();
-		}
+			if (CurrentLevel.shuffleSegment) {
+				CurrentLevel.ShuffleSegments ();
+			}
 
-//		Debug.Log ("Load Level " + levelIndex);
-		SetState(GameState.LoadLevel);
-		mGameplayPosition.LevelScore = 0;
-		mGameplayPosition.LevelIndex = levelIndex;
-		mGameplayPosition.SegmentIndex = -1;
-//		mGameplayPosition.SucsessSegment = 0;
-		mGameplayPosition.SucsessSegments = new bool[5];
+			//		Debug.Log ("Load Level " + levelIndex);
+			SetState(GameState.LoadLevel);
+			mGameplayPosition.LevelScore = 0;
+			mGameplayPosition.LevelIndex = levelIndex;
+			mGameplayPosition.SegmentIndex = -1;
+			//		mGameplayPosition.SucsessSegment = 0;
+			mGameplayPosition.SucsessSegments = new bool[5];
 
-		mGameplayPosition.AllowMaxStars = true;
+			mGameplayPosition.AllowMaxStars = true;
 
-		LevelScoreText.text = "0";
+			LevelScoreText.text = "0";
 
-		SetSegmentToShowTreasureChest ();
+			SetSegmentToShowTreasureChest ();
 
-		if(ReaplaceBackground_SelectMonster) {
-			LoadBackground ();
-			ReaplaceBackground_SelectMonster = false;
-		}
-		UpdateLauncherPoint ();
-		UpdateCurrentMonster ();
-		MouseTrailMaterial.color = CurrentLevel.ActiveTintColor;
-		Common.Instance.AddNonPauseAction(LoadFirstSegment);
+			if(ReaplaceBackground_SelectMonster) {
+				LoadBackground ();
+				ReaplaceBackground_SelectMonster = false;
+			}
+			UpdateLauncherPoint ();
+			UpdateCurrentMonster ();
+			MouseTrailMaterial.color = CurrentLevel.ActiveTintColor;
+			Common.Instance.AddNonPauseAction(LoadFirstSegment);
 
-//		LevelScoreText.text = mGameplayPosition.LevelScore.ToString();
+			//		LevelScoreText.text = mGameplayPosition.LevelScore.ToString();
 
-		mGameplayPosition.SelectedBooster = null;
+			mGameplayPosition.SelectedBooster = null;
 
-		SegmentsDisplay.Init (CurrentLevel.Segments.Length);
-		/*if (UserInfo.Instance.CollectedFriends.Length > 0) {
+			SegmentsDisplay.Init (CurrentLevel.Segments.Length);
+			/*if (UserInfo.Instance.CollectedFriends.Length > 0) {
 			UIController.Instance. ShowPopup(UIController.Instance.SelectFriendPopup);
 		} */
 
-		if (CurrentLevel.StoneType == 2) {
-			ltrPrefab = LetterPrefab_2 [Random.Range (0, LetterPrefab_2.Length)];
-		} else {
-			ltrPrefab = LetterPrefab_1 [Random.Range (0, LetterPrefab_1.Length)];
-		}
+			if (CurrentLevel.StoneType == 2) {
+				ltrPrefab = LetterPrefab_2 [Random.Range (0, LetterPrefab_2.Length)];
+			} else {
+				ltrPrefab = LetterPrefab_1 [Random.Range (0, LetterPrefab_1.Length)];
+			}
 
-		Analitics.Instance.treckScreen ("Level " + (levelIndex + 1) + " - Profile: " + UsersController.Instance.CurrentProfileId);
+			Analitics.Instance.treckScreen ("Level " + (levelIndex + 1) + " - Profile: " + UsersController.Instance.CurrentProfileId);
+
 	}
+
 
 
 	void UpdateLauncherPoint()
