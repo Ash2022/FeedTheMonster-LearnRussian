@@ -157,7 +157,7 @@ PlayerSettings:
     tvOS: com.eduapp4syria.feedthemonster
   buildNumber:
     iOS: 0
-  AndroidBundleVersionCode: 6
+  AndroidBundleVersionCode: 8
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0

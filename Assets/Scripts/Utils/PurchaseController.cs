@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class PurchaseController : MonoBehaviour {
 
@@ -9,29 +10,44 @@ public class PurchaseController : MonoBehaviour {
 	public static PurchaseController Instance{ get; set;}
 
 	[SerializeField] TMP_Text	m_feedback_text;
+	[SerializeField] TMP_Text	m_price_text;
+	[SerializeField] TMP_Text	m_desc_text;
 	[SerializeField]GameObject	m_purchase_view=null;
 	int							m_bought_in_pp=0;
 	bool						m_has_reciept=false;
+	bool						m_price=false;
 
 	bool						m_already_bought=false;
+
+	Action<bool>					m_bought_callback;
 
 	void Awake()
 	{
 		Instance = this;
 	}
 
-	public void InitStates()
+	public bool InitStates()
 	{
+		m_feedback_text.text = "Clear";
 		int saved_in_pp = PlayerPrefs.GetInt ("AllLevelUnlocked");
 		bool has_reciept = IAPManager.Instance.Already_purchased;
+		m_price_text.text = IAPManager.Instance.String_price;
+		m_desc_text.text = IAPManager.Instance.String_item_name;
+		Debug.Log("SAVED IN PP: " + saved_in_pp);
+		Debug.Log("SAVED IN GOOGLE: " + has_reciept);
 
 		if (saved_in_pp == 1 || has_reciept)
 			m_already_bought = true;
+
+		return m_already_bought;
 	}
 
-	void Start()
+	public void ShowBuyScreen(bool show, Action<bool> buy_callback=null)
 	{
-		InitStates ();
+		if (buy_callback != null)
+			m_bought_callback = buy_callback;
+
+		m_purchase_view.SetActive (show);
 	}
 
 	public void BuyClicked()
@@ -40,25 +56,37 @@ public class PurchaseController : MonoBehaviour {
 			{
 
 				m_feedback_text.text = succ.ToString();
+
 				if(succ)
 				{
 					PlayerPrefs.SetInt("AllLevelUnlocked",1);
-				}
-				else
-				{
+					m_already_bought = true;
 
+					if (m_bought_callback!=null)
+						m_bought_callback(true);
 				}
+
 			});
 	}
 
-	public void Init()
+	public void CloseClicked()
 	{
-		m_feedback_text.text = "Clear";
+		ShowBuyScreen (false);
+
+		if (m_bought_callback!=null)
+			m_bought_callback(false);
+
 	}
 
 	public bool Already_bought {
 		get {
 			return m_already_bought;
 		}
+	}
+
+	public void ClearPP()
+	{
+		PlayerPrefs.DeleteKey ("AllLevelUnlocked");
+		Debug.Log ("Deleted PP key");
 	}
 }

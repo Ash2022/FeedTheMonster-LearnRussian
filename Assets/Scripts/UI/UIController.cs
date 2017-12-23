@@ -24,8 +24,6 @@ public class UIController : MonoBehaviour {
 	public GameObject MonsterSelectionPanel;
 	public GameObject ParentsReportPanel;
 
-	[SerializeField]GameObject	PurchasePanel=null;
-
 	public Text PuzzleCountdown;
 
 	public GameObject LevelEndPopup;
@@ -43,6 +41,7 @@ public class UIController : MonoBehaviour {
 	GameObject mNextPanel;
 	GameObject mOpenPopup;
 
+	bool		m_bought=false;
 
 
 	public GameObject LastPanel {
@@ -124,13 +123,6 @@ public class UIController : MonoBehaviour {
 		//Debug.Log ("ShowPanel " + mCurrentPanel);
 	}
 
-	public void ShowPurchasePanel()
-	{
-
-		PurchasePanel.SetActive (true);
-		PurchasePanel.GetComponent<PurchaseController> ().Init ();
-
-	}
 
 	public void ShowPanelWithoutTransitionEffect(GameObject panel)
 	{
@@ -186,17 +178,8 @@ public class UIController : MonoBehaviour {
 
 	public void LevelButtonClick(int levelIndex)
 	{
-		if (levelIndex > 3)
-		{
+		GoToLevel (levelIndex);
 			
-			//test if already bought (in the player prefs)
-			//check the flag for purchase in the IAP controller
-
-			//if both false - show buy page - else play
-		}
-		//	ShowPurchasePanel ();
-		//else
-			GoToLevel (levelIndex);
 	}
 
 	public void RetryLevelClickConfirm()
@@ -263,10 +246,53 @@ public class UIController : MonoBehaviour {
 	{
 		GameplayController.Instance.CurrentLevelIndex = Mathf.Min(levelIndex, GameplayController.Instance.NumOfLevels - 1);
 
+		if (!m_bought)
+		{
+			//already bought stored locally - just keep playing
+			
+			if (levelIndex > 3) 
+			{
+				PurchaseController purchase_cont = gameObject.GetComponent<PurchaseController> ();
+				bool bought = purchase_cont.InitStates ();
+
+				if (bought)
+					PostCheckBuy (levelIndex, monsterSelection);
+				else
+					purchase_cont.ShowBuyScreen (true, (bool success) => 
+						{
+
+							if(success)
+							{
+								purchase_cont.ShowBuyScreen (false);
+								PostCheckBuy (levelIndex, monsterSelection);
+							}
+							else
+							{
+								purchase_cont.ShowBuyScreen (false);
+								ShowMapPanel();
+							}
+
+						
+					});
 
 
+			} 
+			else 
+			{
+				PostCheckBuy (levelIndex, monsterSelection);
+			}
+		} 
+		else 
+		{
+			PostCheckBuy (levelIndex, monsterSelection);
+		}
+
+	}
+
+	private void PostCheckBuy(int levelIndex, bool monsterSelection = true)
+	{
 		if (monsterSelection && UserInfo.Instance.CollectionLength > 0) {
-//			GameplayController.Instance.ReaplaceBackground = false;
+			//			GameplayController.Instance.ReaplaceBackground = false;
 			ShowPanel (MonsterSelectionPanel);
 		} else
 		{
@@ -275,8 +301,14 @@ public class UIController : MonoBehaviour {
 			}
 
 
-				ShowPanel (GamePanel);
+			ShowPanel (GamePanel);
 		}
+	}
+
+
+	public void MonsterSelectionBackClicked()
+	{
+
 	}
 
 	public void SelectFriend(GameObject buttonSender)

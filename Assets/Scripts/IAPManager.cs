@@ -15,7 +15,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
 	private static IExtensionProvider m_StoreExtensionProvider;
 	// The store-specific Purchasing subsystems.
 
-	bool m_already_purchased=false;
+	bool 				m_already_purchased=false;
+	string				m_string_price;
+	string				m_string_item_name;
 
 	Action<bool>		m_buy_callback;
 
@@ -158,6 +160,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
 		else
 			Debug.Log ("Item WASNT purchased");
 
+		m_string_price = product.metadata.localizedPriceString;
+		m_string_item_name = product.metadata.localizedDescription;
+
 	}
 
 
@@ -200,6 +205,18 @@ public class IAPManager : MonoBehaviour, IStoreListener
 	public bool Already_purchased {
 		get {
 			return m_already_purchased;
+		}
+	}
+
+	public string String_price {
+		get {
+			return m_string_price;
+		}
+	}
+
+	public string String_item_name {
+		get {
+			return m_string_item_name;
 		}
 	}
 }

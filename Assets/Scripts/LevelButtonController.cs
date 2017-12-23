@@ -69,7 +69,7 @@ public class LevelButtonController : MonoBehaviour {
 			transform.localScale = new Vector3 (0.01f, 0.01f, 0.01f);
 		}
 
-		int levelOpen = 120;//UserInfo.Instance.GetHighestOpenLevel ();
+		int levelOpen = UserInfo.Instance.GetHighestOpenLevel ();
 
 		if (levelOpen >= levelIndex) {
 			Appear ();
