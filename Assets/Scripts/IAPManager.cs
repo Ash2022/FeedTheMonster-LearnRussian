@@ -113,6 +113,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
 			// ... report the fact Purchasing has not succeeded initializing yet. Consider waiting longer or 
 			// retrying initiailization.
 			Debug.Log ("BuyProductID FAIL. Not initialized.");
+			InitializePurchasing ();
 		}
 	}
 
@@ -152,13 +153,15 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
 		Product product = m_StoreController.products.WithID (Product_Unlock_All_Levels);
 
-		if (product != null && product.hasReceipt) 
-		{
+		if (product != null && product.hasReceipt) {
 			Debug.Log ("Item was already purchased");
 			m_already_purchased = true;
-		}
-		else
+		} 
+		else 
+		{
+			m_already_purchased = false;
 			Debug.Log ("Item WASNT purchased");
+		}
 
 		m_string_price = product.metadata.localizedPriceString;
 		m_string_item_name = product.metadata.localizedDescription;

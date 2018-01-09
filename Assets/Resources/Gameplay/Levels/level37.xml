@@ -3,7 +3,7 @@
 	monsterInputType="Letter"
 	CollectableMonster=""
 	SegmentTime="11"
-	HideCallout="-1"
+	HideCallout="4"
 	LettersGroup="1"
 	StoneType="1"
 >
@@ -32,9 +32,9 @@
     	<MonsterAllLetters>
     	</MonsterAllLetters>
     	<Stones>
-    		<string>БАС</string>
+    		<string>БАК</string>
     		<string>КОК</string>
-			<string>БАС</string>
+			<string>БАК</string>
 			<string>КОК</string>
     		<string bonusScore="150">BonusLetter</string>
     		<string bonusScore="150">BonusLetter</string>

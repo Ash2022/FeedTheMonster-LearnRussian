@@ -1,0 +1,24 @@
+﻿Feed the monster 			Накорми чудовище
+Monster Evolve 				Чудовище развивается
+Playing together is so much fun 	Играть вместе так весело
+Select your new monster 		Выбери себе новое чудовище
+watch me grow 				Смотри, я расту
+We have a new friend 			У нас появился новый друг
+Are you sure? 				Уверен?
+
+Amazing 				Изумительно
+Amazing work 				Прекрасная работа
+Fantastic answer 			Чудесный ответ
+Fantastic work 				Чудесная работа
+Fantastic1 				Чудесно
+Fantastic2 				Молодчина
+Fantastic3 				Ты молодец
+Good answer 				Хороший ответ
+Good job 				Отличная работа
+Good work 				Хорошая работа
+Good 					Хорошо
+Great1 					Здорово
+Great2 					Умница
+Great3 					Прекрасно
+Well Done 1 				Отлично сделано 
+Well Done 2 				Замечательно

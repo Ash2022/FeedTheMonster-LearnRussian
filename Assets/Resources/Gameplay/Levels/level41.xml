@@ -3,7 +3,7 @@
 	monsterInputType="LetterInWord"
 	CollectableMonster=""
 	SegmentTime="11"
-	HideCallout="-1"
+	HideCallout="3"
 	LettersGroup="1"
 	StoneType="1"
 >

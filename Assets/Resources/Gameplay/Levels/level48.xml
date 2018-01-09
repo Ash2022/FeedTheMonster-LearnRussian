@@ -2,13 +2,13 @@
 <XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 	monsterInputType="SoundLetter"
 	CollectableMonster=""
-	SegmentTime="11"
-	HideCallout="-1"
+	SegmentTime="10"
+	HideCallout="3"
 	LettersGroup="1"
 	StoneType="1"
 >
   <Segments>
-    <Segment spawnIds="92,22,27,26,21,91,1" SegmentTime="11">
+    <Segment spawnIds="92,22,26,21,91,1" SegmentTime="11">
     	<!-- Puzzle One -->
     	<MonsterRequiredLetters>
     		<string>Ш</string>
@@ -24,7 +24,7 @@
 			<string>М</string>
     	</Stones>
 	</Segment>
-	<Segment spawnIds="92,22,27,26,21,91,4" SegmentTime="11">
+	<Segment spawnIds="92,22,27,21,91,4" SegmentTime="11">
     	<!-- Puzzle Two -->
     	<MonsterRequiredLetters>
     		<string>Ф</string>
@@ -40,7 +40,7 @@
 			<string>М</string>
     	</Stones>
 	</Segment>
-	<Segment spawnIds="92,22,27,26,21,91,57" SegmentTime="11">
+	<Segment spawnIds="92,22,27,26,91,57" SegmentTime="11">
     	<!-- Puzzle Three -->
     	<MonsterRequiredLetters>
     		<string>Г</string>

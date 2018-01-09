@@ -3,12 +3,12 @@
 	monsterInputType="SoundLetter"
 	CollectableMonster=""
 	SegmentTime="11"
-	HideCallout="-1"
+	HideCallout="5"
 	LettersGroup="1"
 	StoneType="1"
 >
   <Segments>
-    <Segment spawnIds="92,22,27,26,21,91,71" SegmentTime="11">
+    <Segment spawnIds="92,27,26,21,91,71" SegmentTime="11">
     	<!-- Puzzle One -->
     	<MonsterRequiredLetters>
     		<string>Р</string>
@@ -24,7 +24,7 @@
 			<string>В</string>
     	</Stones>
 	</Segment>
-	<Segment spawnIds="92,22,27,26,21,91,8" SegmentTime="11">
+	<Segment spawnIds="92,22,27,26,21,91" SegmentTime="11">
     	<!-- Puzzle Two -->
     	<MonsterRequiredLetters>
     		<string>И</string>
@@ -40,7 +40,7 @@
 			<string bonusScore="100">FireWrongLetter</string>
     	</Stones>
 	</Segment>
-	<Segment spawnIds="92,22,27,26,21,91,4,8" SegmentTime="11">
+	<Segment spawnIds="27,26,21,36,4,8" SegmentTime="11">
     	<!-- Puzzle Three -->
     	<MonsterRequiredLetters>
     		<string>В</string>
@@ -56,7 +56,7 @@
     		<string>Е</string>
     	</Stones>
 	</Segment>
-	<Segment spawnIds="92,22,27,26,21,36,7,8" SegmentTime="11">
+	<Segment spawnIds="92,22,27,26,21,36,71" SegmentTime="11">
     	<!-- Puzzle Four -->
     	<MonsterRequiredLetters>
     		<string>Б</string>
@@ -73,7 +73,7 @@
 			<string>MagnetLetter</string>
     	</Stones>
 	</Segment>
-	<Segment spawnIds="92,22,27,26,21,56,71,8" SegmentTime="11">
+	<Segment spawnIds="92,22,27,26,21,56" SegmentTime="11">
     	<!-- Puzzle Five -->
     	<MonsterRequiredLetters>
     		<string>П</string>

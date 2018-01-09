@@ -2,8 +2,8 @@
 <XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 	monsterInputType="SoundWord"
 	CollectableMonster=""
-	SegmentTime="13"
-	HideCallout="-1"
+	SegmentTime="10"
+	HideCallout="1"
 	LettersGroup="2"
 	StoneType="1"
 >
@@ -22,7 +22,7 @@
 				<string>НА</string>
 			</Stones>
     </Segment>
-	<Segment spawnIds="90,55,96" SegmentTime="13">
+	<Segment spawnIds="73,20,57,76,58,15,26" SegmentTime="13">
 		<!-- Puzzle Two -->
 		<MonsterRequiredLetters>
 			<string>НЯ</string>

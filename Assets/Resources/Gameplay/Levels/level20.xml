@@ -22,7 +22,7 @@
     		<string>ДО</string>
     	</Stones>
 	</Segment>
-	<Segment spawnIds="57,5,8,23" SegmentTime="11">
+	<Segment spawnIds="57,5,8,27" SegmentTime="11">
 		<!-- Puzzle Two -->
 		<MonsterRequiredLetters>
 			<string>ЛОД</string>

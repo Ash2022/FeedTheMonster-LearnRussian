@@ -2,8 +2,8 @@
 <XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 	monsterInputType="Letter"
 	CollectableMonster=""
-	SegmentTime="11"
-	HideCallout="-1"
+	SegmentTime="10"
+	HideCallout="2"
 	LettersGroup="1"
 	StoneType="1"
 >

@@ -2,13 +2,13 @@
 <XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 	monsterInputType="LetterInWord"
 	CollectableMonster=""
-	SegmentTime="11"
-	HideCallout="-1"
+	SegmentTime="10"
+	HideCallout="1"
 	LettersGroup="1"
 	StoneType="1"
 >
   <Segments>
-    <Segment spawnIds="64, 72, 76, 57, 28, 25, 56, 73, 69, 63" SegmentTime="11">
+    <Segment spawnIds="64,76, 57, 28, 25, 56, 73, 69, 63" SegmentTime="11">
       <!-- Puzzle One -->
 	  <MonsterRequiredLetters>
 		<string>ГА</string>
@@ -29,7 +29,7 @@
 		<string>ГАМ</string>
       </Stones>
     </Segment>
-	<Segment spawnIds="69,18,96,26,27,95,19,72,3"  SegmentTime="11">
+	<Segment spawnIds="69,18,96,66,27,95,19,72,3"  SegmentTime="11">
       <!-- Puzzle Two -->
 	  <MonsterRequiredLetters>
 		<string>МАЙ</string>
@@ -39,18 +39,18 @@
 		<string>X</string>
 	  </MonsterAllLetters>
 	  <Stones>
-        <string>ДАЙ</string>
-        <string>ДАЙ</string>
+        <string>МАЙ</string>
+        <string>МАЙ</string>
         <string>ЛАЙ</string>
 		<string>ЛА</string>
 		<string>ЛА</string>
-		<string>ДАЙ</string>
+		<string>МАЙ</string>
 		<string>ЛАЙ</string>
 		<string>ЛА</string>
 		<string>ЛАЙ</string>
       </Stones>
     </Segment>
-	<Segment spawnIds="12, 90, 55,23, 61,86,20,18,70, 11"  SegmentTime="11">
+	<Segment spawnIds="12, 90,61,86,20,18,70, 11"  SegmentTime="11">
       <!-- Puzzle Three -->
 	  <MonsterRequiredLetters>
 		<string>НЕЙ</string>
@@ -92,7 +92,7 @@
 		<string bonusScore="100">FireWrongLetter</string>
       </Stones>
     </Segment>
-	<Segment spawnIds="32,24,77,36,63,64,17,94 ,29,33" SegmentTime="11">
+	<Segment spawnIds="24,77,36,63,64,17,94 ,29,33" SegmentTime="11">
       <!-- Puzzle Five -->
 	  <MonsterRequiredLetters>
 		<string>АФ</string>

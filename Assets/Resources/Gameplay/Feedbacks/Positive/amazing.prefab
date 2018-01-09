@@ -169,7 +169,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "\u0417\u0430\u043C\u0435\u0447\u0430\u0442\u0435\u043B\u044C\u043D\u043E"
+  m_text: "\u0418\u0437\u0443\u043C\u0438\u0442\u0435\u043B\u044C\u043D\u043E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 6a7f0a59f4f1c91438c92c7cc6bd087b, type: 2}
   m_sharedMaterial: {fileID: 21824542066525654, guid: 6a7f0a59f4f1c91438c92c7cc6bd087b,
@@ -237,7 +237,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 114125906402240300}
-    characterCount: 12
+    characterCount: 11
     spriteCount: 0
     spaceCount: 0
     wordCount: 1
@@ -350,7 +350,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "\u0417\u0430\u043C\u0435\u0447\u0430\u0442\u0435\u043B\u044C\u043D\u043E"
+  m_text: "\u0418\u0437\u0443\u043C\u0438\u0442\u0435\u043B\u044C\u043D\u043E"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: da65b3adb71d5324b807af6a72617c64, type: 2}
   m_sharedMaterial: {fileID: 21824542066525654, guid: da65b3adb71d5324b807af6a72617c64,
@@ -418,7 +418,7 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 114714871622484908}
-    characterCount: 12
+    characterCount: 11
     spriteCount: 0
     spaceCount: 0
     wordCount: 1

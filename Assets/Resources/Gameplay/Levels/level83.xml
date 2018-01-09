@@ -2,8 +2,8 @@
 <XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 	monsterInputType="LetterInWord"
 	CollectableMonster=""
-	SegmentTime="11"
-	HideCallout="-1"
+	SegmentTime="9"
+	HideCallout="1"
 	LettersGroup="1"
 	StoneType="1"
 >
@@ -47,11 +47,11 @@
 	<Segment spawnIds="23, 61,86,20,18,70, 11" SegmentTime="11">
       <!-- Puzzle Three -->
 	  <MonsterRequiredLetters>
-		<string>СА</string>
+		<string>ПЬЕ</string>
 	  </MonsterRequiredLetters>
 	  <MonsterAllLetters>
+		<string>СА</string>
 		<string>X</string>
-		<string>ПЬЕ</string>
 	  </MonsterAllLetters>
 	  <Stones>
         <string>ПЕЛ</string>

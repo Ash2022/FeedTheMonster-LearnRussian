@@ -64,6 +64,7 @@ public class BonusPuzzle : MonoBehaviour {
 		if (OpenParticale != null) {
 			OpenParticale.SetActive (false);
 		}
+
 		if (AudioController.Instance != null) {
 			AudioController.Instance.PlaySound (titleSound);
 		}

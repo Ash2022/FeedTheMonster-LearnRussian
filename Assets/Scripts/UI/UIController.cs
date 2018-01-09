@@ -250,7 +250,7 @@ public class UIController : MonoBehaviour {
 		{
 			//already bought stored locally - just keep playing
 			
-			if (levelIndex > 3) 
+			if (levelIndex > 7) 
 			{
 				PurchaseController purchase_cont = gameObject.GetComponent<PurchaseController> ();
 				bool bought = purchase_cont.InitStates ();

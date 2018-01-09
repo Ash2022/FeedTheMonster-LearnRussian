@@ -3,7 +3,7 @@
 	monsterInputType="SoundWord"
 	CollectableMonster=""
 	SegmentTime="13"
-	HideCallout="-1"
+	HideCallout="3"
 	LettersGroup="2"
 	StoneType="1"
 >

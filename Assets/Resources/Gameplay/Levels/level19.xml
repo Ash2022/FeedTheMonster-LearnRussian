@@ -42,7 +42,7 @@
 			<string bonusScore="125">BonusLetter</string>
       	</Stones>
     </Segment>
-	<Segment spawnIds="59,78,6,7,62,78,60" SegmentTime="11">
+	<Segment spawnIds="94,93,59,61,7,6" SegmentTime="11">
 		<!-- Puzzle Three -->
       	<MonsterRequiredLetters>
 			<string>ОТ</string>

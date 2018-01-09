@@ -3,7 +3,7 @@
 	monsterInputType="SoundWord"
 	CollectableMonster=""
 	SegmentTime="13"
-	HideCallout="-1"
+	HideCallout="3"
 	LettersGroup="2"
 	StoneType="1"
 >
@@ -36,10 +36,10 @@
 			<string>КИ</string>
 		</Stones>
     </Segment>
-	<Segment spawnIds="89,54,95,7" SegmentTime="13">
+	<Segment spawnIds="89,54,7" SegmentTime="13">
 		<!-- Puzzle Three -->
 		<MonsterRequiredLetters>
-			<string>СА</string>
+			<string>СО</string>
 			<string>ВА</string>
 		</MonsterRequiredLetters>
 		<MonsterAllLetters>
@@ -50,7 +50,7 @@
 			<string>НИ</string>
 		</Stones>
     </Segment>
-	<Segment spawnIds="59,93,36" SegmentTime="13">
+	<Segment spawnIds="4,22,7,8,9" SegmentTime="13">
 		<!-- Puzzle Four -->
 		<MonsterRequiredLetters>
 			<string>К</string>
@@ -68,7 +68,7 @@
 			<string>Д</string>
 		</Stones>
 	</Segment>
-	<Segment spawnIds="61,94,45,7" SegmentTime="13">
+	<Segment spawnIds="61,94,7" SegmentTime="13">
 		<!-- Puzzle Five -->
 		<MonsterRequiredLetters>
 			<string>ПАР</string>

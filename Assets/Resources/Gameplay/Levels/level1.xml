@@ -5,7 +5,7 @@
 	SegmentTime="11"
 	HideCallout="-1"
 	LettersGroup="1"
-	StoneType="1"
+	StoneType="3"
 >
   <Segments>
     <Segment spawnIds="28,94,7" SegmentTime="11">

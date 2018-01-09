@@ -2,8 +2,8 @@
 <XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 	monsterInputType="LetterInWord"
 	CollectableMonster=""
-	SegmentTime="11"
-	HideCallout="-1"
+	SegmentTime="10"
+	HideCallout="1"
 	LettersGroup="1"
 	StoneType="1"
 >
@@ -26,7 +26,7 @@
         <string>ЛО</string>
       </Stones>
     </Segment>
-	<Segment spawnIds="92,22,27,26,21,91,1" SegmentTime="11">
+	<Segment spawnIds="92,22,26,21,91,1" SegmentTime="11">
       <!-- Puzzle Two -->
 	  <MonsterRequiredLetters>
 		<string>ГАЙ</string>
@@ -63,7 +63,7 @@
     	<string bonusScore="150">BonusLetter</string>
       </Stones>
     </Segment>
-	<Segment spawnIds="69,18,96,26,27,95,19,72,3" SegmentTime="11">
+	<Segment spawnIds="69,18,96,26,95,19,3" SegmentTime="11">
       <!-- Puzzle Four -->
 	  <MonsterRequiredLetters>
 		<string>РУ</string>
@@ -82,7 +82,7 @@
 		<string bonusScore="100">FireWrongLetter</string>
       </Stones>
     </Segment>
-	<Segment spawnIds="12, 90, 55,23, 61,86,20,18,70, 11" SegmentTime="11">
+	<Segment spawnIds="12, 90, 55,20,70, 11" SegmentTime="11">
       <!-- Puzzle Five -->
 	  <MonsterRequiredLetters>
 		<string>ТУ</string>
@@ -97,7 +97,7 @@
         <string>ТУ</string>
 		<string>КО</string>
 		<string>ДО</string>
-        <string>Ту</string>
+        <string>ТУ</string>
       </Stones>
     </Segment>
   </Segments>

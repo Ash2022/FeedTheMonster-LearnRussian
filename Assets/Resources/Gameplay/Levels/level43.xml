@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 	monsterInputType="Word"
-	CollectableMonster=""
+	CollectableMonster="Larva"
 	SegmentTime="13"
-	HideCallout="-1"
+	HideCallout="3"
 	LettersGroup="1"
 	StoneType="1"
 >
@@ -36,7 +36,7 @@
 			<string>КА</string>
 		</Stones>
     </Segment>
-	<Segment spawnIds="83,82,8" SegmentTime="13">
+	<Segment spawnIds="45,22,27,8,9,82" SegmentTime="13">
 		<!-- Puzzle Three -->
 		<MonsterRequiredLetters>
 			<string>Н</string>

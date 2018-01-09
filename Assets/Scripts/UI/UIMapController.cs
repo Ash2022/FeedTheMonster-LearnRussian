@@ -6,6 +6,7 @@ public class UIMapController : MonoBehaviour {
 //	public Text ScoreText;
 	public Button btnCollection;
 	public ScrollRect mapScroll;
+	public GameObject mSettingsPopup;
 
 	bool isStatusPopupShow = false;
 
@@ -97,6 +98,10 @@ public class UIMapController : MonoBehaviour {
 		}
 	}
 
+	public void OpenSettingsPopup()
+	{
+		mSettingsPopup.SetActive (true);
+	}
 
 	public void OnSELClick()
 	{

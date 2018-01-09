@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <XMLLevel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
 	monsterInputType="SoundWord"
-	CollectableMonster=""
+	CollectableMonster="Ice"
 	SegmentTime="13"
-	HideCallout="-1"
+	HideCallout="5"
 	LettersGroup="2"
 	StoneType="1"
 >
@@ -41,7 +41,6 @@
 		<MonsterRequiredLetters>
 			<string>ДА</string>
 			<string>МА</string>
-			<string>КА</string>
 		</MonsterRequiredLetters>
 		<MonsterAllLetters>
 		</MonsterAllLetters>

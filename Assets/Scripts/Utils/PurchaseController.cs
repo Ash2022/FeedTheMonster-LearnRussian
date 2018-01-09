@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using System.IO;
 
 public class PurchaseController : MonoBehaviour {
 
@@ -33,11 +34,23 @@ public class PurchaseController : MonoBehaviour {
 		bool has_reciept = IAPManager.Instance.Already_purchased;
 		m_price_text.text = IAPManager.Instance.String_price;
 		m_desc_text.text = IAPManager.Instance.String_item_name;
+
+
+		if (m_desc_text.text == null) //this means you are offline and also you dont have the key set in PP
+		{
+			m_desc_text.text = "Нет сети - попробуйте подключится заново";
+		}
+
 		Debug.Log("SAVED IN PP: " + saved_in_pp);
 		Debug.Log("SAVED IN GOOGLE: " + has_reciept);
 
 		if (saved_in_pp == 1 || has_reciept)
 			m_already_bought = true;
+
+		if(has_reciept)//this means he probably canceled the purchase - so still has local key - but not purchase key - next time will not work
+			PlayerPrefs.SetInt("AllLevelUnlocked",1);
+		else
+			PlayerPrefs.SetInt("AllLevelUnlocked",0);
 
 		return m_already_bought;
 	}
@@ -88,5 +101,31 @@ public class PurchaseController : MonoBehaviour {
 	{
 		PlayerPrefs.DeleteKey ("AllLevelUnlocked");
 		Debug.Log ("Deleted PP key");
+	}
+
+
+	public void CreateNames()
+	{
+		string path = "Assets/Resources/test.txt";
+
+		//Write some text to the test.txt file
+		StreamWriter writer = new StreamWriter(path, true);
+
+
+
+		DirectoryInfo dir = new DirectoryInfo("Assets/Resources/Sounds/Voice/Words");
+		FileInfo[] info = dir.GetFiles("*.mp3");
+		foreach (FileInfo f in info) 
+		{ 
+			string temp = f.Name;
+			int len = temp.Length;
+			string word = temp.Substring (0, len - 4);
+
+			writer.WriteLine(word);
+
+		}
+
+		writer.Close();
+
 	}
 }
