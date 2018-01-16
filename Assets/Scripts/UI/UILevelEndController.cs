@@ -510,7 +510,7 @@ public class UILevelEndController : MonoBehaviour {
 						needToShow = true;
 					}
 				}
-				if(needToShow == true)
+				if(needToShow == true && false)
 				{
 					UIController.Instance.MonsterStatusPopup.SetActive (true);
 					UIStatusController StatusController = UIController.Instance.MonsterStatusPopup.GetComponent<UIStatusController> ();

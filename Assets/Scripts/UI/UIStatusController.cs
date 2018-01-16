@@ -66,6 +66,7 @@ public class UIStatusController : MonoBehaviour {
 	public void init(Monster monster)
 	{
 		CurrentMonster = monster;
+		/*
 		if (SadMonster != null) {
 			Destroy (SadMonster);
 		}
@@ -100,7 +101,7 @@ public class UIStatusController : MonoBehaviour {
 //			UpdateIcon (Icon_Afraid);
 //			AudioController.Instance.PlaySound (Sound_Afraid);
 //			break;
-		}
+		}*/
 		UpdateMonster ();
 	}
 

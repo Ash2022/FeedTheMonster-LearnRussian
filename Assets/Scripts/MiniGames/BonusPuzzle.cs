@@ -30,6 +30,8 @@ public class BonusPuzzle : MonoBehaviour {
 
 	public AudioClip backSound;
 
+	public GameObject m_anim_hand = null;
+
 
 	CanvasGroup cg;
 	bool isStart;
@@ -68,6 +70,13 @@ public class BonusPuzzle : MonoBehaviour {
 		if (AudioController.Instance != null) {
 			AudioController.Instance.PlaySound (titleSound);
 		}
+
+		if (m_anim_hand != null) {
+			m_anim_hand.SetActive (true);
+			iTween.ScaleTo(m_anim_hand, iTween.Hash("x", .75, "y", .75, "easeType", iTween.EaseType.easeInCubic, "time", .35, "looptype", "pingPong"));
+		}
+
+
 		Invoke ("Init", 2f);
 	}
 
@@ -107,6 +116,8 @@ public class BonusPuzzle : MonoBehaviour {
 
 	void Init ()
 	{
+
+
 		isStart = true;
 		OpenBox.SetActive(true);
 		CloseBox.SetActive(false);
@@ -142,6 +153,8 @@ public class BonusPuzzle : MonoBehaviour {
 
 	void onStoneClick(BonusPuzzleStone stone)
 	{
+		if (m_anim_hand != null && m_anim_hand.activeSelf)
+			m_anim_hand.SetActive (false);
 //		if (numParticles <= MaxParticles)
 //		{
 			stone.addParticles ();

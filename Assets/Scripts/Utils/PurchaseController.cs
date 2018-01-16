@@ -47,11 +47,12 @@ public class PurchaseController : MonoBehaviour {
 		if (saved_in_pp == 1 || has_reciept)
 			m_already_bought = true;
 
+		/*
 		if(has_reciept)//this means he probably canceled the purchase - so still has local key - but not purchase key - next time will not work
 			PlayerPrefs.SetInt("AllLevelUnlocked",1);
 		else
 			PlayerPrefs.SetInt("AllLevelUnlocked",0);
-
+*/
 		return m_already_bought;
 	}
 

@@ -18,10 +18,10 @@ PlayerSettings:
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
-  m_SplashScreenOverlayOpacity: 0.5
+  m_SplashScreenOverlayOpacity: 0.758
   m_SplashScreenAnimation: 0
   m_SplashScreenLogoStyle: 1
-  m_SplashScreenDrawMode: 1
+  m_SplashScreenDrawMode: 0
   m_SplashScreenBackgroundAnimationZoom: 1
   m_SplashScreenLogoAnimationZoom: 1
   m_SplashScreenBackgroundLandscapeAspect: 0.6666667
@@ -157,7 +157,7 @@ PlayerSettings:
     tvOS: com.eduapp4syria.feedthemonster
   buildNumber:
     iOS: 0
-  AndroidBundleVersionCode: 31
+  AndroidBundleVersionCode: 34
   AndroidMinSdkVersion: 16
   AndroidTargetSdkVersion: 0
   AndroidPreferredInstallLocation: 0

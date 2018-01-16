@@ -84,7 +84,7 @@ public class UIMapController : MonoBehaviour {
 
 	void ShowStatusPopup()
 	{
-		if(!isStatusPopupShow)
+		if(!isStatusPopupShow && false)
 		{
 			Monster monster = MiniGameController.Instance.getEmotionMonster ();
 			if (monster != null) {

@@ -24,10 +24,10 @@ public static class GameplaySettings {
 	public static int 		ShuterButtonAddScore_2		= 75;
 	public static int 		ShuterButtonAddScore_1		= 100;
 
-	public static float		ShuterButtonShowTime_4		=  1.5f;
-	public static float		ShuterButtonShowTime_3		=  1.5f;
-	public static float		ShuterButtonShowTime_2		=  1.5f;
-	public static float		ShuterButtonShowTime_1		=  1.5f;
+	public static float		ShuterButtonShowTime_4		=  .25f;
+	public static float		ShuterButtonShowTime_3		=  .25f;
+	public static float		ShuterButtonShowTime_2		=  .25f;
+	public static float		ShuterButtonShowTime_1		=  .25f;
 
 /*
 	public static float		ShuterButtonDecreaseTime_4	=  0.0f;
