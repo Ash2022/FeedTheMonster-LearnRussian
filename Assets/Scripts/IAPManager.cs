@@ -44,7 +44,11 @@ public class IAPManager : MonoBehaviour, IStoreListener
 		if (m_StoreController == null) {
 			// Begin to configure our connection to Purchasing
 			InitializePurchasing ();
-		}
+            
+
+        }
+
+
 	}
 
 	public void InitializePurchasing ()
@@ -183,6 +187,18 @@ public class IAPManager : MonoBehaviour, IStoreListener
 			Debug.Log (string.Format ("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
 			// TODO: The non-consumable item has been successfully purchased, grant this item to the player.
 			m_buy_callback(true);
+
+            Product p = args.purchasedProduct;
+
+            string trans_id = p.transactionID;
+            string affiliation = "";
+            double revenue = (double)p.metadata.localizedPrice;
+            double tax = 0;
+            double shipping = 0;
+            string currency = p.metadata.isoCurrencyCode;
+
+
+            Analitics.Instance.LogTransaction(trans_id, affiliation, revenue, tax, shipping, currency);
 		}
 			
 			// Or ... an unknown product has been purchased by this user. Fill in additional products here....

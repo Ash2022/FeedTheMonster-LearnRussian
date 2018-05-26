@@ -49,6 +49,12 @@ public class Analitics : MonoBehaviour
 		}
 	}
 
-
+    public void LogTransaction(string transID, string affiliation,double revenue,double tax, double shipping, string currency)
+    {
+        if (googleAnalytics != null)
+        {
+            googleAnalytics.LogTransaction(transID, affiliation, revenue, tax, shipping, currency);
+        }
+    }
 
 }
