@@ -19,7 +19,9 @@ public class IAPManager : MonoBehaviour, IStoreListener
 	string				m_string_price;
 	string				m_string_item_name;
 
-	Action<bool>		m_buy_callback;
+    bool                m_came_from_buy = false;    //flag to difrentiate between buy clicks and restores 
+
+	Action<bool>		m_buy_callback=null;
 
 	// Product identifiers for all products capable of being purchased:
 	// "convenience" general identifiers for use with Purchasing, and their store-specific identifier
@@ -185,27 +187,33 @@ public class IAPManager : MonoBehaviour, IStoreListener
 		// A consumable product has been purchased by this user.
 		 if (String.Equals (args.purchasedProduct.definition.id, Product_Unlock_All_Levels, StringComparison.Ordinal)) {
 			Debug.Log (string.Format ("ProcessPurchase: PASS. Product: '{0}'", args.purchasedProduct.definition.id));
-			// TODO: The non-consumable item has been successfully purchased, grant this item to the player.
-			m_buy_callback(true);
+            // TODO: The non-consumable item has been successfully purchased, grant this item to the player.
+            if (m_buy_callback != null)
+            {
+                m_buy_callback(true);
 
-            Product p = args.purchasedProduct;
+                Product p = args.purchasedProduct;
 
-            string trans_id = p.transactionID;
-            string affiliation = "";
-            double revenue = (double)p.metadata.localizedPrice;
-            double tax = 0;
-            double shipping = 0;
-            string currency = p.metadata.isoCurrencyCode;
+                string trans_id = p.transactionID;
+                string affiliation = "";
+                double revenue = (double)p.metadata.localizedPrice;
+                double tax = 0;
+                double shipping = 0;
+                string currency = p.metadata.isoCurrencyCode;
 
 
-            Analitics.Instance.LogTransaction(trans_id, affiliation, revenue, tax, shipping, currency);
+                Analitics.Instance.LogTransaction(trans_id, affiliation, revenue, tax, shipping, currency);
+            }
 		}
 			
 			// Or ... an unknown product has been purchased by this user. Fill in additional products here....
 			else {
 			Debug.Log (string.Format ("ProcessPurchase: FAIL. Unrecognized product: '{0}'", args.purchasedProduct.definition.id));
-			m_buy_callback(false);
+            if (m_buy_callback != null)
+                m_buy_callback(false);
 		}
+
+        m_buy_callback = null;
 
 		// Return a flag indicating whether this product has completely been received, or if the application needs 
 		// to be reminded of this purchase at next app launch. Use PurchaseProcessingResult.Pending when still 
