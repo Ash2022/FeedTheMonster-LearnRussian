@@ -195,14 +195,13 @@ public class IAPManager : MonoBehaviour, IStoreListener
                 Product p = args.purchasedProduct;
 
                 string trans_id = p.transactionID;
-                string affiliation = "";
+               
                 double revenue = (double)p.metadata.localizedPrice;
-                double tax = 0;
-                double shipping = 0;
+             
                 string currency = p.metadata.isoCurrencyCode;
 
 
-                Analitics.Instance.LogTransaction(trans_id, affiliation, revenue, tax, shipping, currency);
+                Analitics.Instance.LogTransaction(trans_id, revenue, currency);
             }
 		}
 			

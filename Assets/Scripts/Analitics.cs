@@ -49,11 +49,11 @@ public class Analitics : MonoBehaviour
 		}
 	}
 
-    public void LogTransaction(string transID, string affiliation,double revenue,double tax, double shipping, string currency)
+    public void LogTransaction(string transID,double revenue, string currency)
     {
         if (googleAnalytics != null)
         {
-            googleAnalytics.LogTransaction(transID, affiliation, revenue, tax, shipping, currency);
+            googleAnalytics.LogTransaction(transID, "InApp", revenue, 0, 0, currency);
         }
     }
 
