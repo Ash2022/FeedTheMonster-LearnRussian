@@ -119,7 +119,7 @@ public class GoogleAnalyticsV4 : MonoBehaviour {
     }
 
     if (UncaughtExceptionReporting) {
-#if UNITY_5
+#if UNITY_5 || UNITY_2017
       Application.logMessageReceived += HandleException;
 #else
       Application.RegisterLogCallback (HandleException);
@@ -150,6 +150,21 @@ public class GoogleAnalyticsV4 : MonoBehaviour {
       instance = this;
 
       DontDestroyOnLoad(instance);
+
+      // automatically set app parameters from player settings if they are left empty
+      if(string.IsNullOrEmpty(productName)) {
+        productName = Application.productName;
+      }
+      if(string.IsNullOrEmpty(bundleIdentifier)) {
+#if UNITY_5
+        bundleIdentifier = Application.bundleIdentifier;
+#elif UNITY_2017
+        bundleIdentifier = Application.identifier;
+#endif
+      }
+      if(string.IsNullOrEmpty(bundleVersion)) {
+        bundleVersion = Application.version;
+      }
 
       Debug.Log("Initializing Google Analytics 0.2.");
 #if UNITY_ANDROID && !UNITY_EDITOR

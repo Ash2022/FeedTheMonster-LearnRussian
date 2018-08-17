@@ -1,0 +1,10 @@
+<dependencies>
+  <packages>
+    <package>com.google.android.gms:play-services-analytics:9.4</package>
+    <package>com.google.android.gms:play-services-analytics:LATEST</package>
+  </packages>
+  <files>
+    <file>Assets/Plugins/Android/common-1.0.0.jar</file>
+    <file>Assets/Plugins/Android/runtime-1.0.0.aar</file>
+  </files>
+</dependencies>

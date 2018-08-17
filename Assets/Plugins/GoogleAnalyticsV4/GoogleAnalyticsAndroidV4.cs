@@ -100,6 +100,17 @@ public class GoogleAnalyticsAndroidV4 : IDisposable {
     eventBuilder.Call<AndroidJavaObject>("setAction", new object[] { builder.GetEventAction() });
     eventBuilder.Call<AndroidJavaObject>("setLabel", new object[] { builder.GetEventLabel() });
     eventBuilder.Call<AndroidJavaObject>("setValue", new object[] { builder.GetEventValue() });
+	
+	foreach(KeyValuePair<int, string> i in builder.GetCustomDimensions())
+    {
+        eventBuilder.Call<AndroidJavaObject>("setCustomDimension", new object[] { i.Key, i.Value });
+    }
+
+    foreach(KeyValuePair<int, float> i in builder.GetCustomMetrics())
+    {
+        eventBuilder.Call<AndroidJavaObject>("setCustomMetric", new object[] { i.Key, i.Value });
+    }
+	
     object[] builtEvent = new object[] { eventBuilder.Call<AndroidJavaObject>("build") };
     tracker.Call("send", builtEvent);
   }
@@ -132,12 +143,33 @@ public class GoogleAnalyticsAndroidV4 : IDisposable {
   }
 
   public void LogException(ExceptionHitBuilder builder) {
+    AndroidJavaObject exceptionBuilder = new AndroidJavaObject("com.google.android.gms.analytics.HitBuilders$ExceptionBuilder");
+    exceptionBuilder.Call<AndroidJavaObject>("setDescription", new object[] { builder.GetExceptionDescription() });
+    exceptionBuilder.Call<AndroidJavaObject>("setFatal", new object[] { builder.IsFatal() });
+
+    object[] builtException = new object[] { exceptionBuilder.Call<AndroidJavaObject>("build") };
+    tracker.Call("send", builtException);
   }
 
   public void LogSocial(SocialHitBuilder builder) {
+    AndroidJavaObject socialBuilder = new AndroidJavaObject("com.google.android.gms.analytics.HitBuilders$SocialBuilder");
+    socialBuilder.Call<AndroidJavaObject>("setAction", new object[] { builder.GetSocialAction() });
+    socialBuilder.Call<AndroidJavaObject>("setNetwork", new object[] { builder.GetSocialNetwork() });
+    socialBuilder.Call<AndroidJavaObject>("setTarget", new object[] { builder.GetSocialTarget() });
+
+    object[] builtSocial = new object[] { socialBuilder.Call<AndroidJavaObject>("build") };
+    tracker.Call("send", builtSocial);
   }
 
   public void LogTiming(TimingHitBuilder builder) {
+    AndroidJavaObject timingBuilder = new AndroidJavaObject("com.google.android.gms.analytics.HitBuilders$TimingBuilder");
+    timingBuilder.Call<AndroidJavaObject>("setCategory", new object[] { builder.GetTimingCategory() });
+    timingBuilder.Call<AndroidJavaObject>("setLabel", new object[] { builder.GetTimingLabel() });
+    timingBuilder.Call<AndroidJavaObject>("setValue", new object[] { builder.GetTimingInterval() });
+    timingBuilder.Call<AndroidJavaObject>("setVariable", new object[] { builder.GetTimingName() });
+
+    object[] builtTiming = new object[] { timingBuilder.Call<AndroidJavaObject>("build") };
+    tracker.Call("send", builtTiming);
   }
 
   public void DispatchHits() {

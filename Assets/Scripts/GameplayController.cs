@@ -17,7 +17,11 @@ public class GameplayController : MonoBehaviour {
 //	}
 
 	public struct GameplayPositionStruct {
-		public int LevelIndex;
+
+        
+
+
+        public int LevelIndex;
 		public int SegmentIndex;
 		public int LevelScore;
 		public Booster SelectedBooster;
@@ -87,9 +91,12 @@ public class GameplayController : MonoBehaviour {
 
 	}
 
-//	public TextAsset RecognitionVariantsText;
+    //	public TextAsset RecognitionVariantsText;
 
-	[HideInInspector]
+    public bool m_no_timer = false;
+    public bool m_no_shaking = false;
+
+    [HideInInspector]
 	public MonsterCalloutController CurrentActive;
 
 
@@ -281,6 +288,7 @@ public class GameplayController : MonoBehaviour {
 
 	void Countdown()
 	{
+        
 		if (GameplayController.Instance.IsPause || GameplayController.Instance.IsPausePopup)
 			return;
 
@@ -294,7 +302,7 @@ public class GameplayController : MonoBehaviour {
 				foreach (LetterController letter in letters) {
 					if (CurrentLevel.monsterInputType == MonsterInputType.Letter || CurrentLevel.monsterInputType == MonsterInputType.LetterInWord || CurrentLevel.monsterInputType == MonsterInputType.SoundLetter) {
 						if (letter.text.text == CurrentSegment.MonsterRequiredLetters [0]) {
-							if (letter.State == LetterController.LetterState.Idle && NeedShowLetterWarning ())
+							if (letter.State == LetterController.LetterState.Idle && NeedShowLetterWarning () && !m_no_shaking)
 								letter.SetState (LetterController.LetterState.Warning);
 						} else {
 							if (letter.State == LetterController.LetterState.Warning)
@@ -306,12 +314,12 @@ public class GameplayController : MonoBehaviour {
 								if (i > 0) {
 									for (int k=i; k>=0; k--) {
 										if (k != i && FindLetterInGame(CurrentSegment.MonsterRequiredLetters[k]) == null) {
-											if (letter.State == LetterController.LetterState.Idle && NeedShowLetterWarning ())
+											if (letter.State == LetterController.LetterState.Idle && NeedShowLetterWarning () && !m_no_shaking)
 												letter.SetState (LetterController.LetterState.Warning);
 										}
 									}
 								} else {
-									if (letter.State == LetterController.LetterState.Idle && NeedShowLetterWarning ())
+									if (letter.State == LetterController.LetterState.Idle && NeedShowLetterWarning () && !m_no_shaking)
 										letter.SetState (LetterController.LetterState.Warning);
 								}
 							}
@@ -327,7 +335,9 @@ public class GameplayController : MonoBehaviour {
 		}
 
 //		if (CountdownCounter >= GameplaySettings.Countdown) {
-		if (CountdownCounter >= segmentTime) {
+
+
+		if (CountdownCounter >= segmentTime  && !m_no_timer) {
 //			Debug.Log ("Countdown");
 			Timer.Instance.Remove (Countdown );
 //			AudioController.Instance.PlaySound (SoundTimeup, .5f);
@@ -344,16 +354,23 @@ public class GameplayController : MonoBehaviour {
 		} else {
 			// use for freeze timer booster
 			if (segmentTime - CountdownCounter <= GameplaySettings.ShowTimeupSeconds && !isTimeup) {
-				isTimeup = true;
+                isTimeup = true;
 				AudioController.Instance.PlaySound (SoundTimeup, true);
 			}
 			if (isFreezeTimer == false) {
-				CountdownCounter += Time.deltaTime;
-				// start added by Tzahi
-				updateTimerSlider ();
-			}
+                
+                CountdownCounter += Time.deltaTime;
+                // start added by Tzahi
 
-			if(slowBoosterDuration > 0) {
+                if (!m_no_timer)
+                    updateTimerSlider();
+
+
+            }
+   
+
+
+            if (slowBoosterDuration > 0) {
 				slowBoosterDuration -= Time.deltaTime;
 			}
 
@@ -368,20 +385,24 @@ public class GameplayController : MonoBehaviour {
 
 	void updateTimerSlider()
 	{
-		float timePrecent = CountdownCounter / (segmentTime / 100);
-		timerSlider.value = 100 - ((timePrecent > 100) ? 100 : timePrecent);
 
-		Vector3 v;
-		{
-			v = timerTicks1.transform.rotation.eulerAngles;
-			v.z -= 1;
-			timerTicks1.transform.rotation = Quaternion.Euler (v);
-		}
-		{
-			v = timerTicks2.transform.rotation.eulerAngles;
-			v.z -= 2;
-			timerTicks2.transform.rotation = Quaternion.Euler (v);
-		}
+        
+            float timePrecent = CountdownCounter / (segmentTime / 100);
+            timerSlider.value = 100 - ((timePrecent > 100) ? 100 : timePrecent);
+
+            Vector3 v;
+            {
+                v = timerTicks1.transform.rotation.eulerAngles;
+                v.z -= 1;
+                timerTicks1.transform.rotation = Quaternion.Euler(v);
+            }
+            {
+                v = timerTicks2.transform.rotation.eulerAngles;
+                v.z -= 2;
+                timerTicks2.transform.rotation = Quaternion.Euler(v);
+            }
+        
+		
 	}
 
 	bool NeedShowLetterWarning()
@@ -1356,7 +1377,9 @@ public class GameplayController : MonoBehaviour {
 			CurrentActive.SetMonsterState (MonsterCalloutController.MonsterState.Idle);
 		}
 		_currentLevelScoreToFlush = 0;
+        
 		CancelInvoke ();
+
 		DestroyLetters ();
 		DestroyMonsters ();
 
