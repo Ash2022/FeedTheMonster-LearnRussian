@@ -30,6 +30,9 @@ GameObject:
   - component: {fileID: 114332396908264248}
   - component: {fileID: 114513930832395546}
   - component: {fileID: 114238168962873016}
+  - component: {fileID: 114813419410940722}
+  - component: {fileID: 114899473738530428}
+  - component: {fileID: 114364606522033670}
   m_Layer: 0
   m_Name: Gameplay
   m_TagString: Untagged
@@ -79,54 +82,69 @@ AudioSource:
   rolloffCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
-    - serializedVersion: 2
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
       time: 1
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
   panLevelCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   spreadCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
   reverbZoneMixCustomCurve:
     serializedVersion: 2
     m_Curve:
-    - serializedVersion: 2
+    - serializedVersion: 3
       time: 0
       value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
@@ -196,6 +214,17 @@ MonoBehaviour:
   tutorialHandImage: {fileID: 0}
   PanelTutorial: {fileID: 0}
   startButton: {fileID: 0}
+--- !u!114 &114364606522033670
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1928527691161216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3fbba51f030e44d97d18fdfd678b9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114418645699438230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -269,9 +298,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c5c3e2e325e9904daac87ea59a49d16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_no_timer: 0
+  m_no_hint: 0
   CurrentActive: {fileID: 0}
   CheatButton: {fileID: 0}
-  NumOfLevels: 77
+  NumOfLevels: 115
   DefaultLevelTempletes: {fileID: 11400000, guid: 912abc312cf981b46926d742a5f8a283,
     type: 2}
   LetterPrefab_1:
@@ -398,7 +429,6 @@ MonoBehaviour:
   bonusPuzzlePrefabs: {fileID: 1562475538499348, guid: fefd469512373a24d93052916479ca95,
     type: 2}
   ReaplaceBackground: 0
-  ReaplaceBackground_SelectMonster: 1
   SoundTimeup: {fileID: 8300000, guid: 3d02ce11f3cce7c459a2a24da083dacd, type: 3}
   SoundMargeLetters: {fileID: 8300000, guid: 513f4e2f338fe1a40a6a2bc306551207, type: 3}
   SoundCancelDrag: {fileID: 8300000, guid: 339289467ef0a0048be5271c9ff85d06, type: 3}
@@ -439,6 +469,32 @@ MonoBehaviour:
   timerTicks2: {fileID: 0}
   isSegmentComplete: 0
   isFreezeTimer: 0
+--- !u!114 &114813419410940722
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1928527691161216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0331733bfc65d8f458280fdcaaa19901, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_feedback_text: {fileID: 0}
+  m_price_text: {fileID: 0}
+  m_desc_text: {fileID: 0}
+  m_purchase_view: {fileID: 0}
+--- !u!114 &114899473738530428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1928527691161216}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 668d79eade2bd9f439ebd1780c02511d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114946802678697564
 MonoBehaviour:
   m_ObjectHideFlags: 1

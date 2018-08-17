@@ -100,9 +100,13 @@ public class UserInfo : MonoBehaviour {
 		Instance = this;
 		IsMusicEnable ();
 		IsSoundEnable ();
-		isInited = true;
-	}
 
+        
+
+		isInited = true;
+        IsTimerDisabled();
+	}
+    
 	void Start () {
 		AddFirstFriendsToCollection();
 	}
@@ -144,7 +148,46 @@ public class UserInfo : MonoBehaviour {
 		return isSound;
 	}
 
-	public void SetLastProfileId(int profileId)
+    public void DeleteTimerHintKey()
+    {
+        PlayerPrefs.DeleteKey("DisableTimer");
+        PlayerPrefs.DeleteKey("DisableHint");
+    }
+
+    public void SetTimerHint()
+    {
+        SetTimerDisabled(PlayerPrefs.GetInt("DisableTimer") == 1);
+        SetHintDisabled(PlayerPrefs.GetInt("DisableHint") == 1);
+    }
+
+    public void SetTimerDisabled(bool enable)
+    {
+        
+        PlayerPrefs.SetInt("DisableTimer", enable ? 1 : 0);
+        GameplayController.Instance.No_timer = enable;
+    }
+    public bool IsTimerDisabled()
+    {
+        
+       return (PlayerPrefs.GetInt("DisableTimer") == 1);
+        
+        
+    }
+
+    public void SetHintDisabled(bool enable)
+    {
+        
+        PlayerPrefs.SetInt("DisableHint", enable ? 1 : 0);
+        GameplayController.Instance.No_hint = enable;
+    }
+    public bool IsHintDisabled()
+    {
+        
+       return (PlayerPrefs.GetInt("DisableHint") == 1);
+        
+    }
+
+    public void SetLastProfileId(int profileId)
 	{
 		lastProfileId = profileId;
 		PlayerPrefs.SetInt ("LastProfileId", lastProfileId);

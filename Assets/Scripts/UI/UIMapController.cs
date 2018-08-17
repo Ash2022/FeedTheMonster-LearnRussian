@@ -10,17 +10,27 @@ public class UIMapController : MonoBehaviour {
 
 	bool isStatusPopupShow = false;
 
-	void Awake() {
+	void Awake()
+    {
+        //m_no_timer = UserInfo.Instance.IsTimerDisabled();
 
-	}
+        //m_no_hint = UserInfo.Instance.IsHintDisabled();
 
-	// Use this for initialization
-	/*void Start () {
+        //UserInfo.Instance.DeleteTimerHintKey();
+
+        //Debug.Log("No timer: " + UserInfo.Instance.IsTimerDisabled() + " No Hint: " + UserInfo.Instance.IsHintDisabled());
+
+        GameplayController.Instance.No_timer = UserInfo.Instance.IsTimerDisabled();
+        GameplayController.Instance.No_hint = UserInfo.Instance.IsHintDisabled();
+    }
+
+    // Use this for initialization
+    /*void Start () {
 	
 	}*/
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
 
 	}
 
@@ -33,6 +43,8 @@ public class UIMapController : MonoBehaviour {
 		Invoke("ShowStatusPopup", 2f);
 
 		Analitics.Instance.treckScreen ("Map");
+
+
 	}
 
 

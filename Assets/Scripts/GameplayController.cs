@@ -94,7 +94,7 @@ public class GameplayController : MonoBehaviour {
     //	public TextAsset RecognitionVariantsText;
 
     public bool m_no_timer = false;
-    public bool m_no_shaking = false;
+    public bool m_no_hint = false;
 
     [HideInInspector]
 	public MonsterCalloutController CurrentActive;
@@ -302,7 +302,7 @@ public class GameplayController : MonoBehaviour {
 				foreach (LetterController letter in letters) {
 					if (CurrentLevel.monsterInputType == MonsterInputType.Letter || CurrentLevel.monsterInputType == MonsterInputType.LetterInWord || CurrentLevel.monsterInputType == MonsterInputType.SoundLetter) {
 						if (letter.text.text == CurrentSegment.MonsterRequiredLetters [0]) {
-							if (letter.State == LetterController.LetterState.Idle && NeedShowLetterWarning () && !m_no_shaking)
+							if (letter.State == LetterController.LetterState.Idle && NeedShowLetterWarning () && !m_no_hint)
 								letter.SetState (LetterController.LetterState.Warning);
 						} else {
 							if (letter.State == LetterController.LetterState.Warning)
@@ -314,12 +314,12 @@ public class GameplayController : MonoBehaviour {
 								if (i > 0) {
 									for (int k=i; k>=0; k--) {
 										if (k != i && FindLetterInGame(CurrentSegment.MonsterRequiredLetters[k]) == null) {
-											if (letter.State == LetterController.LetterState.Idle && NeedShowLetterWarning () && !m_no_shaking)
+											if (letter.State == LetterController.LetterState.Idle && NeedShowLetterWarning () && !m_no_hint)
 												letter.SetState (LetterController.LetterState.Warning);
 										}
 									}
 								} else {
-									if (letter.State == LetterController.LetterState.Idle && NeedShowLetterWarning () && !m_no_shaking)
+									if (letter.State == LetterController.LetterState.Idle && NeedShowLetterWarning () && !m_no_hint)
 										letter.SetState (LetterController.LetterState.Warning);
 								}
 							}
@@ -337,9 +337,12 @@ public class GameplayController : MonoBehaviour {
 //		if (CountdownCounter >= GameplaySettings.Countdown) {
 
 
-		if (CountdownCounter >= segmentTime  && !m_no_timer) {
-//			Debug.Log ("Countdown");
-			Timer.Instance.Remove (Countdown );
+		if (CountdownCounter >= segmentTime && !m_no_timer) {
+
+            //&& !No_timer
+
+            //			Debug.Log ("Countdown");
+            Timer.Instance.Remove (Countdown );
 //			AudioController.Instance.PlaySound (SoundTimeup, .5f);
 
 			this.mGameplayPosition.AllowMaxStars = false;
@@ -419,7 +422,17 @@ public class GameplayController : MonoBehaviour {
 	{
 		Instance = this;
 		_levels = new Level[NumOfLevels];
-	}
+        //UserInfo.Instance.SetTimerHint();
+
+       // UserInfo.Instance.DeleteTimerHintKey();
+
+       // m_no_timer = UserInfo.Instance.IsTimerDisabled();
+
+        //m_no_hint = UserInfo.Instance.IsHintDisabled();
+
+
+        //Debug.Log("No timer: " + m_no_timer + " No Hint: " + m_no_hint);
+    }
 
 	public void SetState(GameState state)
 	{
@@ -1658,7 +1671,33 @@ public class GameplayController : MonoBehaviour {
 		}
 	}
 
-	public void DoFireBooster(BoosterController booster, LetterController dragedLetter)
+    public bool No_timer
+    {
+        get
+        {
+            return m_no_timer;
+        }
+
+        set
+        {
+            m_no_timer = value;
+        }
+    }
+
+    public bool No_hint
+    {
+        get
+        {
+            return m_no_hint;
+        }
+
+        set
+        {
+            m_no_hint = value;
+        }
+    }
+
+    public void DoFireBooster(BoosterController booster, LetterController dragedLetter)
 	{
 		foreach (LetterController letter in AllLetters) {
 			if (letter != booster && letter != dragedLetter && IsDistractor (letter) && letter.State == LetterController.LetterState.Idle) {
