@@ -41,7 +41,8 @@ public class PurchaseController : MonoBehaviour {
 			m_desc_text.text = "Нет сети - попробуйте подключится заново";
 		}
 
-		Debug.Log("SAVED IN PP: " + saved_in_pp);
+        Debug.Log("DESC: " + m_desc_text.text);
+        Debug.Log("SAVED IN PP: " + saved_in_pp);
 		Debug.Log("SAVED IN GOOGLE: " + has_reciept);
 
 		if (saved_in_pp == 1 || has_reciept)
