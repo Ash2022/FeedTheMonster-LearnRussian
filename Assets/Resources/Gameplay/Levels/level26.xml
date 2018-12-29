@@ -68,7 +68,7 @@
 	<Segment spawnIds="61,94,45,6" SegmentTime="13">
 		<!-- Puzzle Five -->
 		<MonsterRequiredLetters>
-			<string>КА</string>
+			<string>КО</string>
 			<string>МЕ</string>
 			<string>ТА</string>
 		</MonsterRequiredLetters>

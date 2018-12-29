@@ -209,7 +209,7 @@ public class UIMiniGame : MonoBehaviour
 	public void OnPointerClick (PointerEventData eventData)
 	{
 		if (!isDraged) {
-			Done ();
+			//Done ();
 		}
 	}
 

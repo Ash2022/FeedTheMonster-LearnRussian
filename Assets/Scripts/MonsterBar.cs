@@ -155,12 +155,14 @@ public class MonsterBar : MonoBehaviour {
 	public void Init(bool isMiniGame = false)
 	{
 		IsMiniGame = isMiniGame;
+        
 		selectedMonster = null;
 		isLocated = true;
 		isTouchAllow = true;
-//		currentIndex = 0;
+        
+        //		currentIndex = 0;
 
-		Destroy (GameObject.Find ("monster"));
+        Destroy (GameObject.Find ("monster"));
 
 		Clean ();
 
@@ -251,8 +253,9 @@ public class MonsterBar : MonoBehaviour {
 		selectedMonster.gameObject.name = "monster";
 		isLocated = false;
 		isTouchAllow = false;
-		//selectedMonster.gameObject.tag = "CurrentMonster";
-	}
+
+        //selectedMonster.gameObject.tag = "CurrentMonster";
+    }
 
 
 	public void Clean() {
