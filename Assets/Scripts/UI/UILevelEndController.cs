@@ -155,14 +155,36 @@ public class UILevelEndController : MonoBehaviour {
 
 		ScoreText.text = GameplayController.Instance.CurrentLevelScore.ToString();
 
-		// this is to stop loop of happy / sad animations
-//		if (GameplayController.Instance != null && GameplayController.Instance.CurrentActive != null) {
-//			GameplayController.Instance.CurrentActive.SetMonsterState (MonsterCalloutController.MonsterState.Idle);
-//		}
+        if(hasNextLevel==false && isWin)
+        {
+            //this is the last level
+            NextButton.gameObject.SetActive(false);
+            RetryButton.gameObject.SetActive(false);
+            // buttons for lose
+            RetryFailButton.gameObject.SetActive(false);
+            MapButton.gameObject.SetActive(false);
+            StartCoroutine(WaitAndShowWin());
+        }
+
 
 		transform.localScale = new Vector3 (3.1f, 3.1f, 3.1f);
 		Camera.main.orthographicSize = 5f;
+
+        
+
+
 	}
+
+    IEnumerator WaitAndShowWin()
+    {
+        yield return new WaitForSeconds(3f);
+        GameplayController.Instance.ShowWinScreen(()=>
+        {
+            MapButton.gameObject.SetActive(true);
+        });
+    }
+
+    
 
 	void UnPauseMusic(){
 		AudioController.Instance.ChangeMusic (GameWinMusic, true);

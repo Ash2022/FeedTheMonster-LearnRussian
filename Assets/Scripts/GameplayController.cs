@@ -6,6 +6,7 @@ using System.Linq;
 using UnityEngine.SceneManagement;
 using UnityEngine.EventSystems;
 using System.Text;
+using System;
 
 public class GameplayController : MonoBehaviour {
 
@@ -18,8 +19,8 @@ public class GameplayController : MonoBehaviour {
 
 	public struct GameplayPositionStruct {
 
-        
 
+        
 
         public int LevelIndex;
 		public int SegmentIndex;
@@ -161,9 +162,10 @@ public class GameplayController : MonoBehaviour {
 //	public GameObject treasureChestPrefabs;
 	public GameObject bonusPuzzlePrefabs;
 
+    public GameObject win_screen_panel;
+    public AudioClip m_win_game;
 
-
-	[HideInInspector]
+    [HideInInspector]
 	public bool ReaplaceBackground;
 
 	bool _reaplaceBackground_SelectMonster = true;
@@ -184,9 +186,9 @@ public class GameplayController : MonoBehaviour {
 	public AudioClip SoundSpitsMeal;
 	public AudioClip SoundScoreCount;
 
+    Action m_win_screen_done;
 
-
-	public string[] backgrounds;
+    public string[] backgrounds;
 
 
 	[HideInInspector]
@@ -418,6 +420,22 @@ public class GameplayController : MonoBehaviour {
 		return true;
 	}
 
+    public void ShowWinScreen(Action done)
+    {
+        AudioController.Instance.PlaySound(m_win_game);
+        win_screen_panel.SetActive(true);
+        m_win_screen_done = done;
+
+    }
+
+    public void WinScreenClicked()
+    {
+        win_screen_panel.SetActive(false);
+
+        if (m_win_screen_done != null)
+            m_win_screen_done();
+    }
+
 	void Awake()
 	{
 		Instance = this;
@@ -485,7 +503,7 @@ public class GameplayController : MonoBehaviour {
 		ShowTreasureChestInSegment = -1;
 		if (mGameplayPosition.LevelIndex != 0) {
 			if (mGameplayPosition.LevelIndex == 1 || UnityEngine.Random.value <= GameplaySettings.TreasureChest_ChanceToShow) {
-				ShowTreasureChestInSegment = Random.Range (1, CurrentLevel.Segments.Length);
+				ShowTreasureChestInSegment = UnityEngine.Random.Range (1, CurrentLevel.Segments.Length);
 			}
 		}
 //		ShowTreasureChestInSegment = 0;
@@ -533,9 +551,9 @@ public class GameplayController : MonoBehaviour {
 		} */
 
 			if (CurrentLevel.StoneType == 2) {
-				ltrPrefab = LetterPrefab_2 [Random.Range (0, LetterPrefab_2.Length)];
+				ltrPrefab = LetterPrefab_2 [UnityEngine.Random.Range (0, LetterPrefab_2.Length)];
 			} else {
-				ltrPrefab = LetterPrefab_1 [Random.Range (0, LetterPrefab_1.Length)];
+				ltrPrefab = LetterPrefab_1 [UnityEngine.Random.Range (0, LetterPrefab_1.Length)];
 			}
 
 			Analitics.Instance.treckScreen ("Level " + (levelIndex + 1) + " - Profile: " + UsersController.Instance.CurrentProfileId);
@@ -582,7 +600,7 @@ public class GameplayController : MonoBehaviour {
 //			go = background;
 			go = Resources.Load ("Gameplay/Background/" + background) as GameObject;
 		} else {
-			string fileName = backgrounds [Random.Range (0, backgrounds.Length)];
+			string fileName = backgrounds [UnityEngine.Random.Range (0, backgrounds.Length)];
 			go = Resources.Load ("Gameplay/Background/" + fileName ) as GameObject;
 		}
 		LoadBackground (go);
@@ -772,7 +790,7 @@ public class GameplayController : MonoBehaviour {
 				stone.spawnId = "";
 
 				if (SpawnIds.Count > 0) {
-					rndLocationIndex = Random.Range (0, SpawnIds.Count);
+					rndLocationIndex = UnityEngine.Random.Range (0, SpawnIds.Count);
 					location = getLocationBySpawnId (locations, SpawnIds [rndLocationIndex]);
 
 					SpawnIds.RemoveAt (rndLocationIndex);
@@ -1220,7 +1238,7 @@ public class GameplayController : MonoBehaviour {
 		int[] letterDisappearDelays = new int[letters.Length];
 		for (int i = 0; i < letterDisappearDelays.Length; i++)
 			letterDisappearDelays [i] = i;
-		letterDisappearDelays = letterDisappearDelays.OrderBy (x => Random.value).ToArray ();
+		letterDisappearDelays = letterDisappearDelays.OrderBy (x => UnityEngine.Random.value).ToArray ();
 
 		for (int i = 0; i < letters.Length; i++) {
 			letters [i].DisapearWon (letterDisappearDelays [i] * 0.07f);
